@@ -4,7 +4,7 @@
 <div class="container">
     <div class="box-container">
         <div class="box-title">
-            <h2>Destinasi populer Pulau Bintan</h2>
+            <h2>Tempat populer Pulau Bintan</h2>
             <hr>
             <p>Berikut Adalah Destinasi wisata Yang Populer Dan Paling Banyak Di kunjungi Masyarakat</p>
         </div>
