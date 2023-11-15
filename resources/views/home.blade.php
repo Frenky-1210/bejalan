@@ -18,9 +18,9 @@
             </h1>
             <div class="header-bottom">
                 <ul class="social-media">   
-                    <li><a href=""><img src="{{asset('assets-landingpage/Images/youtube.png')}}" alt=""></a></li>
+                    <!-- <li><a href=""><img src="{{asset('assets-landingpage/Images/youtube.png')}}" alt=""></a></li> -->
                     <li><a href=""><img src="{{asset('assets-landingpage/Images/github.png')}}" alt=""></a></li>
-                    <li><a href=""><img src="{{asset('assets-landingpage/Images/instagram.png')}}" alt=""></a></li>
+                    <!-- <li><a href=""><img src="{{asset('assets-landingpage/Images/instagram.png')}}" alt=""></a></li> -->
                 </ul>
             </div>
         </nav>
@@ -59,18 +59,16 @@
                     <h2 class="bintan">T</h2>
                 </div>
                 <div class="image-box">
-                    <img src="{{asset('assets-landingpage/Images/pgl-img.jpg')}}" alt="image">
+                    <img src="{{asset('assets-landingpage/Images/Forest-Hole-3-4.jpg')}}" alt="image">
                     <h2 class="bintan">A</h2>
                 </div>
                 <div class="image-box">
-                    <img src="{{asset('assets-landingpage/Images/pgl-img.jpg')}}" alt="image">
+                    <img src="{{asset('assets-landingpage/Images/vihara-patung-seribu.jpg')}}" alt="image">
                     <h2 class="bintan">N</h2>
                 </div>
             </div>
             <div class="about-info">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit tempore obcaecati itaque qui dolores
-                earum, numquam quos deserunt repellat dolorum reiciendis quam odit nisi ipsa doloremque tempora sit
-                saepe commodi!
+            Pulau Bintan, berlokasi di Kepulauan Riau, Indonesia, adalah destinasi wisata yang mempesona dengan gabungan indahnya alam tropis dan warisan budaya yang kaya. Terkenal dengan pantainya yang memukau, Bintan menawarkan pengalaman liburan yang sempurna bagi para pencinta pantai dan pecinta petualangan.
             </div>
         </div>
     </section>
@@ -86,7 +84,7 @@
                 <h2>Bejalan</h2>
                 <p>Bintan Island Tourism</p>
               </div>
-              <p>Pulau Bintan adalah sebuah surga tropis yang terletak di Kepulauan Riau, Indonesia. Dengan keindahan alam yang menakjubkan dan kekayaan budaya yang melimpah, Pulau Bintan telah menjadi destinasi wisata yang sangat populer bagi wisatawan yang mencari pengalaman liburan yang unik.
+              <p>Bejalan adalah perusahaan yang berkomitmen untuk memberikan pengalaman perjalanan yang tak terlupakan kepada pelanggan kami. Sebagai penyedia layanan pariwisata terkemuka, kami menghadirkan destinasi menakjubkan dan program perjalanan yang dirancang khusus untuk memenuhi keinginan dan ekspektasi Anda.
 
                 
                 
@@ -100,7 +98,7 @@
       </section>
     <!-- Footer -->
     <footer>
-        &copy;SMKN4 TANJUNGPINANG
+        &copy;BEJALAN
     </footer>
 
     <!-- Parallax -->

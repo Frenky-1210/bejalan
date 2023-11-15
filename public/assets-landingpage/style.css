@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #dbdbdb;
+    background-color: FCF5ED;
     color: balck;
    font-family: "Poppins", sans-serif;
 }
@@ -34,7 +34,7 @@ header::before {
     height: 60vh;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to top, rgb(219, 219, 219), rgba(0, 0, 0, 0));
+    background: linear-gradient(to top, rgb(252, 245, 237), rgba(0, 0, 0, 0));
 }
 
 nav,
@@ -45,14 +45,18 @@ nav,
     position: relative;
 }
 
+.social-media {
+    display: flex;
+    align-items: end;
+}
 .logo a {
-    color: black;
+    color: #1F1717;
     font-size: 2rem;
 }
 
 .btn-sign-up {
     padding: 0.7rem 2rem;
-    background: #000000;
+    background:#1F1717;
     color: #ffffff;
     font-weight: 500;
     border-radius: 50px;
@@ -60,7 +64,7 @@ nav,
 }
 .btn-sign-up:hover {
     background: white;
-    color: black;
+    color: #1F1717;
 }
 
 .header-tittle {
@@ -74,7 +78,7 @@ nav,
     position: relative;
     display: inline-block;
     font-size: 40px;
-    color: #000000;
+    color:#1F1717;
     text-transform: uppercase;
     animation: flip 2s infinite;
     animation-delay: calc(.2s * var(--i))
@@ -100,8 +104,9 @@ nav,
     display: flex;
     list-style: none;
     width: 350px;
-    justify-content: space-between;
-    align-items: center;
+    
+    flex-direction: column-reverse;
+
 }
 
 .social-media li a {
@@ -110,6 +115,7 @@ nav,
 
 .social-media img {
     width: 35px;
+    
 
 }
 
@@ -141,7 +147,7 @@ nav,
 }
 
 .image-box {
-    width: 22%;
+    width: 15%;
     height: 250px;
     position: relative;
 }
@@ -172,7 +178,7 @@ nav,
 }
 
 footer {
-    background: #000000;
+    background: #1F1717;
     color: #dbdbdb;
     width: 100%;
     padding: 1.5rem 1rem;
@@ -234,7 +240,7 @@ footer {
     padding: 0.7rem 2rem;
     margin-top: 4rem;
     margin-right: 30rem;
-    background: #000000;
+    background: #1F1717;
     color: #ffffff;
     font-weight: 500;
     transition: .3s ;
@@ -244,7 +250,7 @@ footer {
 }
 .btn-readmore:hover {
     background: white;
-    color: black;
+    color: #1F1717;
 }
 .about{
     padding: 4.5rem 0;
@@ -259,6 +265,9 @@ footer {
     opacity: 0.8;
     margin-bottom: 20px;
 }
+.about-info {
+    text-align: center;
+}
 .container {
     max-width: 1320px;
     margin: 0 auto;
@@ -268,7 +277,7 @@ footer {
 
   .read-more-button {
 text-decoration: none;
-background: #000000;
+background:#1F1717;
 filter: drop-shadow(20px);
 border-top-right-radius: 20px;
 border-bottom-right-radius: 20px;
@@ -279,7 +288,7 @@ transition: ease-in-out 0.3s;
 }
 
 .read-more-button:hover {
-    color: black;
+    color: #1F1717;
     background: #dbdbdb;
     
 }
@@ -305,6 +314,7 @@ transition: ease-in-out 0.3s;
     }
     .about-content img {
         width: 100%;
+        border-radius: 20px;
     }
     
     
@@ -318,7 +328,10 @@ transition: ease-in-out 0.3s;
 
     .social-media{
         width: 100%;
+
     }
+
+    
 
     .image-gallery{
         flex-direction: column;
