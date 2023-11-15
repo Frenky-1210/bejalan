@@ -77,7 +77,7 @@
                 <div class="box-overlay-popular">
                     <h1 class="card-title">Crystal Lagoon</h1>
                     <hr>
-                    <p class="card-data">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore aut optio rem placeat molestias animi architecto dolorum sapiente consequuntur natus molestiae, modi ullam eveniet? Explicabo ipsa facere dolor quos?</p>
+                    <p class="card-data">Lorem ipsum dolor siti amet consectetur adipisicing elit. Recusandae labore aut optio rem placeat molestias animi architecto dolorum sapiente consequuntur natus molestiae, modi ullam eveniet? Explicabo ipsa facere dolor quos?</p>
                 </div>
             </article>
         </div>
