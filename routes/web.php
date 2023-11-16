@@ -30,6 +30,8 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::resource('/wisata', WisataController::class);
 
+Route::resource('/pesanan', PesananController::class);
+
 Route::resource('/translator', TranslatorController::class);
 
 Route::resource('/tour', TourController::class);

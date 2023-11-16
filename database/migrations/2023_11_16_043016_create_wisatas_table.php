@@ -11,15 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('translator', function (Blueprint $table) {
+        Schema::create('wisatas', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('age');
-            $table->string('native_language');
-            $table->string('language_skill');
-            $table->string('experience');
-            $table->string('contact');
-            $table->string('picture');
+            $table->string('tempat_wisata');
+            $table->string('lokasi');
+            $table->text('deskripsi');
+            $table->string('sumber_data');
+            $table->string('gambar');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('translator');
+        Schema::dropIfExists('wisatas');
     }
 };

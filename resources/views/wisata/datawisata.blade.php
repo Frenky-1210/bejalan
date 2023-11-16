@@ -73,7 +73,7 @@
             <div class="modal-body">
                 <h1>{{ $items->tempat_wisata }}</h1>
                 <h3>{{ $items->lokasi }}</h3>
-                <img class="mb-3 rounded" src="{{ asset('storage/' . $items->gambar) }}" alt="{{ $items->tempat_wisata }} Gambar" style="max-width: 100%; max-height: auto; transition: transform 0.3s;">
+                <img class="mb-3 rounded" src="{{ asset('storage/' . $items->gambar) }}" alt="{{ $items->tempat_wisata }}" style="max-width: 100%; max-height: auto; transition: transform 0.3s;">
                 <p>{{ $items->deskripsi }}</p>
                 <h5>Sumber : {{ $items->sumber_data }}</h5>
             </div>

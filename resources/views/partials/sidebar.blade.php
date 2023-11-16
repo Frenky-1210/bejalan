@@ -30,7 +30,7 @@
             </a>
             <div class="collapse" id="p">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">Pesanan Tiket Tour</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{route('pesan')}}">Pesanan Tiket Tour</a></li>
               </ul>
             </div>
           </li>
