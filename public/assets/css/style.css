@@ -36,7 +36,7 @@ margin: 0;
 padding: 0.1rem 0;
 border-radius: 2rem;
 display: flex;
-justify-content: flex-end;
+justify-content: space-between;
 align-items: center;
 margin-left: 12px;
 margin-right: 12px;
@@ -44,7 +44,7 @@ margin-right: 12px;
 
 .nav-item {
 list-style: none;
-margin-right: 2rem;
+margin-right: 15px;
 }
 
 .nav-item a {
@@ -498,7 +498,8 @@ padding-left: 0rem;
 }
 
 .dropdown {
-  margin: auto;
+  position: relative;
+  top: 80px;
   width: max-content;
   transform: translateY(-5rem);
 }
@@ -588,4 +589,10 @@ padding-left: 0rem;
   opacity: 1;
   transform: scale(1);
   pointer-events: initial;
+}
+
+@media screen and (max-width: 576px) {
+ .logo-1 {
+  width: 50%;
+ }
 }

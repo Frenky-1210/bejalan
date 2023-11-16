@@ -14,7 +14,7 @@
                 <a href="{{route('blog')}}">BLOG</a>
             </li>
             <li>
-             
+            <div class="dropdown" id="dropdown-content">
                         <button class="dropdown__button" id="dropdown-button">
                    <i class="ri-user-3-line dropdown__icon"></i>
                    <span class="dropdown__name">My profile</span>
