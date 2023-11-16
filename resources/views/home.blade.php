@@ -7,6 +7,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="{{asset('assets-landingpage/style.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body>
@@ -22,6 +23,31 @@
                     <li><a href=""><img src="{{asset('assets-landingpage/Images/github.png')}}" alt=""></a></li>
                     <!-- <li><a href=""><img src="{{asset('assets-landingpage/Images/instagram.png')}}" alt=""></a></li> -->
                 </ul>
+                <div class="dropp">
+                    <div class="dropdown" id="dropdown-content">
+                        <button class="dropdown__button" id="dropdown-button">
+                   <i class="ri-user-3-line dropdown__icon"></i>
+                   <span class="dropdown__name">My profile</span>
+    
+                   <div class="dropdown__icons">
+                      <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                      <i class="ri-close-line dropdown__close"></i>
+                   </div>
+                </button>
+    
+                <ul class="dropdown__menu">
+                   <li class="dropdown__item">
+                      <i class="ri-message-3-line dropdown__icon"></i> 
+                      <span class="dropdown__name"><a href="">Dasboard</a></span>
+                   </li>
+    
+                   <li class="dropdown__item">
+                      <i class="ri-settings-3-line dropdown__icon"></i>
+                      <span class="dropdown__name"><a href="">Settings</a></span>
+                   </li>
+                </ul>
+             </div>
+                </div>
             </div>
         </nav>
         <div class="header-tittle">
@@ -101,5 +127,6 @@
     <!-- Parallax -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="{{asset('assets-landingpage/parallax.js/parallax.js')}}"></script>
+    <script src="{{asset('assets-landingpage/script.js')}}"></script>
 </body>
 </html>
