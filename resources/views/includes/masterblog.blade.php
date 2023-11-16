@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;900&family=Poppins:wght@400;500;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Convergence&family=Doppio+One&family=Fredoka:wght@500&family=Hammersmith+One&family=Marko+One&family=Marmelad&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
     @include('partialsblog.navbar')
@@ -28,6 +29,7 @@
     <!-- Include Toastr from CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="{{asset('assets/js/script-2.js')}}"></script>
 
     <script>
         toastr.options = {

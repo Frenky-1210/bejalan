@@ -88,7 +88,7 @@ ul {
 .dropdown {
   position: relative;
     top: 80px;
-    margin-left: 20px;
+    margin-left: 50px;
   width: max-content;
   transform: translateY(-5rem);
 }
