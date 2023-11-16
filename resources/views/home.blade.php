@@ -85,9 +85,6 @@
                 <p>Bintan Island Tourism</p>
               </div>
               <p>Bejalan adalah perusahaan yang berkomitmen untuk memberikan pengalaman perjalanan yang tak terlupakan kepada pelanggan kami. Sebagai penyedia layanan pariwisata terkemuka, kami menghadirkan destinasi menakjubkan dan program perjalanan yang dirancang khusus untuk memenuhi keinginan dan ekspektasi Anda.
-
-                
-                
                 </p>
 
                 <a href="{{route('blog')}}" class="read-more-button">Read More <i class="f"></i>

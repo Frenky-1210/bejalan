@@ -67,6 +67,8 @@ body {
 
 
 
+
+
 #submit {
     padding: 12px 30px;
     width: 40%;
@@ -88,16 +90,20 @@ body {
     text-decoration: none;
     color: black;
     margin-top: 20px;
+    font-size: small;
     padding-top: 12;
     margin-top: 12px;
     color: black;
-    margin-right: 150px;
+    margin-right: 0px;
+    margin-left: 15px;
     transition: all ease-in-out 0.2s;
+    text-align: end;
+    font-family: var(--Marko);
 
 }
 
 .form a:hover{
-    color: rgb(148, 29, 29);
+    color: rgb(255, 0, 0);
 }
 
 .input-tile {

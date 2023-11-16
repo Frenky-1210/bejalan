@@ -22,8 +22,8 @@
                 <input type="password" name="password" class="box" placeholder="Enter Password">
             </div>
             
-            <span class="sign up">
-                <a href="{{ route('register') }}">Sign Up</a>
+            <span class="sign-up">
+                <a href="{{ route('register') }}">Havent an account yet? Lets Sign Up</a>
             </span>
             <button class="button-56" role="button">Login</button>
         </form>
