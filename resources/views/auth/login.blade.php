@@ -24,7 +24,7 @@
                 <span class="icon"><i class="fa fa-key"></i></span>
                 <input type="password" name="password" class="box" placeholder="Enter Password">
             </div>
-            
+            <a href="">Forgot Password?</a>
             <button class="button-56" role="button">Login</button>
         </form>
         <div class="side">
