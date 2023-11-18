@@ -54,6 +54,7 @@ class PesananController extends Controller
             'fasilitas' => $request->input('fasilitas'),
             'biaya' => $request->input('biaya'),
             'kuota' => $request->input('kuota'),
+            'pesanan' => $request->input('pesanan')
         ]);
         
         // Save the relationship data

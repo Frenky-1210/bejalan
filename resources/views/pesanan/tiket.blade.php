@@ -27,6 +27,7 @@
                             <th>Fasilitas</th>
                             <th>Biaya</th>
                             <th>Kuota</th>
+                            <th>Pesanan</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -41,6 +42,7 @@
                             <td>{{$pesan->fasilitas}}</td>
                             <td>{{$pesan->biaya}}</td>
                             <td>{{$pesan->kuota}}</td>
+                            <td>{{$pesan->pesanan}}</td>
                             <td align="center">
                                 <div class="btn-group" role="group" aria-label="Action">
                                     <form action="{{ route('pesanan.destroy', ['pesanan' => $pesan->id]) }}" method="post">
@@ -196,6 +198,8 @@
                                 </div>
                                 @enderror
                             </div>
+
+                            <input type="hidden" id="pesanan" name="pesanan" value="0">
                         </div>
                     </div>
                 </div>                

@@ -12,7 +12,7 @@ class Pesanan extends Model
     use HasFactory;
     protected $table = 'pesanans';
     protected $primaryKey = 'id';
-    protected $fillable = ['wisata_id', 'tour_id', 'jadwal', 'waktu_start', 'waktu_end', 'fasilitas', 'biaya', 'kuota'];
+    protected $fillable = ['wisata_id', 'tour_id', 'jadwal', 'waktu_start', 'waktu_end', 'fasilitas', 'biaya', 'kuota', 'pesanan'];
 
     public function wisata()
     {
