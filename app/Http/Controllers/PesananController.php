@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Pesanan;
+use App\Models\Wisata;
+use App\Models\Tour;
 use Illuminate\Http\Request;
 
 class PesananController extends Controller
@@ -13,8 +15,10 @@ class PesananController extends Controller
      */
     public function index()
     {
-        $pesan = Pesanan::all();
-        return view('pesanan.tiket', compact('pesan'));
+        $wisatas = Wisata::all();
+        $tours = Tour::all();
+        $pesanan = Pesanan::all();
+        return view('pesanan.tiket', compact('wisatas', 'tours', 'pesanan'));
     }
 
     /**
@@ -30,7 +34,38 @@ class PesananController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'wisata_id' => 'required',
+            'tour_id' => 'required',
+            'jadwal' => 'required',
+            'waktu_start' => 'required',
+            'waktu_end' => 'required',
+            'fasilitas' => 'required',
+            'biaya' => 'required',
+            'kuota' => 'required'
+        ]);
+        
+        $pesanan = new Pesanan([
+            'wisata_id' => $request->input('wisata_id'),
+            'tour_id' => $request->input('tour_id'),
+            'jadwal' => $request->input('jadwal'),
+            'waktu_start' => $request->input('waktu_start'),
+            'waktu_end' => $request->input('waktu_end'),
+            'fasilitas' => $request->input('fasilitas'),
+            'biaya' => $request->input('biaya'),
+            'kuota' => $request->input('kuota'),
+        ]);
+        
+        // Save the relationship data
+        $wisata = Wisata::find($request->input('wisata_id'));
+        $tour = Tour::find($request->input('tour_id'));
+        
+        $pesanan->wisata()->associate($wisata);
+        $pesanan->tour()->associate($tour);
+        
+        $pesanan->save();
+        
+        return redirect('/pesanan')->with('success', 'Data Berhasil Disimpan');
     }
 
     /**

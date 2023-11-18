@@ -18,7 +18,6 @@
                 <li class="nav-item"> <a class="nav-link" href="{{route('wisata.index')}}">Data Destinasi</a></li>
                 <li class="nav-item"> <a class="nav-link" href="{{route('tour.index')}}">Data Tour Guide</a></li>
                 <li class="nav-item"> <a class="nav-link" href="{{route('translator.index')}}">Data Translator</a></li>
-                <li class="nav-item"></li>
               </ul>
             </div>
           </li>
@@ -30,7 +29,7 @@
             </a>
             <div class="collapse" id="p">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="{{route('pesan')}}">Pesanan Tiket Tour</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{route('pesanan.index')}}">Pesanan Tiket Tour</a></li>
               </ul>
             </div>
           </li>
