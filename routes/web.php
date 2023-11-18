@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
@@ -10,6 +11,7 @@ use App\Http\Controllers\TranslatorController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PesananController;
+use App\Http\Controllers\VerificationController;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -35,9 +37,13 @@ Route::get('/tourguide', [TourController::class, 'tourguide'])->name('tourguide'
 Route::middleware(['guest'])->group(function(){
     Route::get('/login', [LoginController::class, 'index'])->name('login');
     Route::post('/login-auth', [LoginController::class, 'login_auth'])->name('login-auth');
+    Route::get('/register', [LoginController::class, 'register'])->name('register');
+    Route::post('/register-proses', [LoginController::class, 'register_proses'])->name('register-proses');
 });
 
 Route::middleware(['auth'])->group( function() {
+    Route::get('/email/verify/need-verification', [VerificationController::class, 'notice'])->name('verification.notice');
+    Route::get('/email/verify/{id}/{hash}', [VerificationController::class, 'verify'])->middleware('signed')->name('verification.verify');
     Route::resource('/wisata', WisataController::class);
     Route::resource('/pesanan', PesananController::class);
     Route::resource('/translator', TranslatorController::class);
@@ -45,8 +51,7 @@ Route::middleware(['auth'])->group( function() {
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
-Route::get('/register', [LoginController::class, 'register'])->name('register');
-Route::post('/register-proses', [LoginController::class, 'register_proses'])->name('register-proses');
+
 // Route::get('/foto_destinasi/{filename}', 'FotoDestinasiController@show')->where('filename', '(.*)')->name('public.foto_destinasi.show');
 // Route::get('/wisata/{wisatum}/edit', 'WisataController@edit');
 // Route::put('/wisata/{wisatum}', 'WisataController@update');

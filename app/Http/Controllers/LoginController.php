@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -52,15 +53,15 @@ class LoginController extends Controller
             'password_confirmation' => 'required|same:password',
             'email' => 'required|email|unique:users,email'
         ]);
+        
+        $user = User::create($request->except('_token'));
+
+        event(new Registered($user));
+
+        auth()->login($user);
+
+        return redirect()->route('verification.notice')->with('success', 'Akun berhasil dibuat, Silahkan Verifikasi Email terlebih dahulu');
     
-        $data['name'] = $request->name;
-        $data['password'] = Hash::make($request->password);
-        $data['confirm_password'] = Hash::make($request->confirm_password);
-        $data['email'] = $request->email;
-        $data['role'] = $request->role;
-    
-        User::create($data);
-    
-        return redirect()->route('login')->with('success', 'Register telah berhasil, silahkan login terlebih dahulu');
+        // return redirect()->route('login')->with('success', 'Register telah berhasil, silahkan login terlebih dahulu');
     }
 }
