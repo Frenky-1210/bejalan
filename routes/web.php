@@ -27,11 +27,11 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+
 Route::get('/post', [BlogController::class, 'post'])->name('post');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::resource('/tour', TourController::class);
 Route::get('/tourguide', [TourController::class, 'tourguide'])->name('tourguide');
 
 Route::middleware(['guest'])->group(function(){
@@ -47,6 +47,7 @@ Route::middleware(['auth'])->group( function() {
     Route::resource('/wisata', WisataController::class);
     Route::resource('/pesanan', PesananController::class);
     Route::resource('/translator', TranslatorController::class);
+    Route::resource('/tour', TourController::class);
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('userAkses:Admin');
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 });

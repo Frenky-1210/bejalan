@@ -43,15 +43,28 @@
                                 <i class="ri-close-line dropdown__close"></i>
                             </div>
                         </button>
-    
+                
+                        @auth
                         <ul class="dropdown__menu">
-                            <li class="dropdown__item">
+                            @if(auth()->user()->role === 'User')
+                                <li class="dropdown__item">
                                     <i class="ri-contract-right-line dropdown__icon"></i>
-                                <span class="dropdown__name"><a href="{{route('logout')}}">Logout</a></span>
-                            </li>   
+                                    <span class="dropdown__name"><a href="{{ route('logout') }}">Logout</a></span>
+                                </li>
+                            @elseif(auth()->user()->role === 'Admin')
+                                <li class="dropdown__item">
+                                    <i class="ri-message-3-line dropdown__icon"></i>
+                                    <span class="dropdown__name"><a href="{{ route('dashboard') }}">Dashboard</a></span>
+                                </li>
+                                <li class="dropdown__item">
+                                    <i class="ri-contract-right-line dropdown__icon"></i>
+                                    <span class="dropdown__name"><a href="{{ route('logout') }}">Logout</a></span>
+                                </li>
+                            @endif
                         </ul>
+                        @endauth
                     </div>
-                </div>
+                </div>                
             </div>
         </nav>
         <div class="header-tittle">
