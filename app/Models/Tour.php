@@ -11,4 +11,14 @@ class Tour extends Model
     protected $table = 'tours';
     protected $primaryKey = 'id';
     protected $fillable = ['nama_tourguide', 'umur', 'jenis_kelamin', 'pengalaman', 'no_telp', 'foto'];
+
+    public function pesan()
+    {
+        return $this->hasMany(Pesan::class, 'tour_id');
+    }
+
+    public function getTourGuideAttribute()
+    {
+        return $this->attributes['nama_tourguide']; // Replace with the actual attribute name in your database
+    }
 }

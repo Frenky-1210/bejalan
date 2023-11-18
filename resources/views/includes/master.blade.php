@@ -361,10 +361,32 @@
   @endif
 </script>
 
+<script>
+  $(document).ready(function () {
+      // Fungsi untuk memberikan format pada input biaya
+      $('#biaya-add').on('input', function () {
+          // Hapus karakter yang bukan digit atau "." dari input
+          var inputVal = $(this).val().replace(/[^0-9]/g, '');
 
+          // Format input menjadi mata uang
+          var formattedVal = formatCurrency(inputVal);
 
-@stack('scripts')
+          // Set nilai input dengan hasil format
+          $(this).val(formattedVal);
+      });
 
+      // Fungsi untuk memberikan format mata uang
+      function formatCurrency(value) {
+          if (!value) return '';
+
+          // Tambahkan koma setiap tiga digit dari belakang
+          var formattedValue = value.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+          // Tambahkan "Rp " di depan
+          return 'Rp ' + formattedValue;
+      }
+  });
+</script>
 
 <!-- <script type="text/javascript">
     $(document).ready(function () {

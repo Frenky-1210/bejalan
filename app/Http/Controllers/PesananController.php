@@ -87,16 +87,30 @@ class PesananController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Pesanan $pesanan)
     {
-        //
+        $validateData = $request->validate([
+            'wisata_id' => 'required',
+            'tour_id' => 'required',
+            'jadwal' => 'required',
+            'waktu_start' => 'required',
+            'waktu_end' => 'required',
+            'fasilitas' => 'required',
+            'biaya' => 'required',
+            'kuota' => 'required'
+        ]);
+        
+        Pesanan::where('id', $pesanan->id)->update($validateData);
+        
+        return redirect('/pesanan')->with('success', 'Data telah diupdate');   
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Pesanan $pesanan)
     {
-        //
+        Pesanan::destroy($pesanan->id);
+        return redirect('/pesanan')->with('success', 'Data Telah Dihapus');
     }
 }
