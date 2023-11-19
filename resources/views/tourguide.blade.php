@@ -33,7 +33,7 @@
                             <p class="description">{{$tourr->pengalaman}}</p>
 
                             <!-- Ganti data-tourguide-id dengan ID yang sesuai -->
-                            <button type="submit" class="button" data-toggle="modal" data-target="#editModal" data-tourguide-id="{{ $tourr->id }}">View More</button>
+                            <button type="submit" class="button">View More</button>
                         </div>
                     </div>
                     @endforeach
@@ -88,9 +88,9 @@
                 </div>
                 <div class="button-bayar">
                     @if(auth()->check())
-                        <a href="#">Pesan</a>
+                        <a href="{{route('terjual')}}">Pesan</a>
                     @else
-                        <button class="bayar" data-tourguide-id="{{ $psn->tour->id }}" onclick="tampilkanNotifikasi()">Bayar</button>
+                        <button class="bayar" onclick="tampilkanNotifikasi()">Pesan</button>
                     @endif
                 </div>
             </div>
@@ -98,21 +98,17 @@
             <!-- Tambahkan tur lebih lanjut jika diperlukan -->
         </div>
     </section>
-
-    <!-- Menambahkan wadah untuk menampilkan informasi destinasi tour -->
-    <div id="destinasi-tour-info"></div>
 </body>
 
-    <!-- swiper js -->
-    <script src="{{asset('assets-tour/js/swiper-bundle.min.js')}}"></script>
-    <script src="{{asset('assets-tour/js/script.js')}}"></script>
+<!-- swiper js -->
+<script src="{{asset('assets-tour/js/swiper-bundle.min.js')}}"></script>
+<script src="{{asset('assets-tour/js/script.js')}}"></script>
 
-    <!-- Script JavaScript -->
-    <script>
-        function tampilkanNotifikasi() {
-            alert("Ingin melakukan pesanan? Ayo daftar terlebih dahulu supaya bisa melakukan pemesanan.");
-        }
-    </script>
-</html>
+<!-- Script JavaScript -->
+<script>
+    function tampilkanNotifikasi() {
+        alert("Ingin melakukan pesanan? Ayo daftar terlebih dahulu supaya bisa melakukan pemesanan.");
+    }
+</script>
 
 @endsection

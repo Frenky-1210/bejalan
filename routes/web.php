@@ -12,7 +12,9 @@ use App\Http\Controllers\TranslatorController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PesananController;
+use App\Http\Controllers\TerjualController;
 use App\Http\Controllers\VerificationController;
+use App\Models\Terjual;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -28,6 +30,8 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+
+Route::get('/terjual', [TerjualController::class, 'index'])->name('terjual');
 
 Route::get('/tourguide', [TourguideController::class, 'index'])->name('tourguide');
 
