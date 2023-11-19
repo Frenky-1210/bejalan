@@ -8,10 +8,10 @@
                 <a href="{{route('home')}}">HOME</a>
             </li>
             <li class="nav-item">
-                <a href="{{route('tourguide')}}">TOUR</a>
+                <a href="{{route('blog')}}">BLOG</a>
             </li>
             <li class="nav-item">
-                <a href="{{route('blog')}}">BLOG</a>
+                <a href="{{route('tourguide')}}">TOUR</a>
             </li>
             {{-- <li class="nav-item">
                 <a href="{{route('login')}}">Log In</a>

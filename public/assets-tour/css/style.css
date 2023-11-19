@@ -1,0 +1,410 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.tour {    
+    padding-top: 12px;
+    
+}
+
+.tour-shape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tour-shape svg {
+    padding: 10px;
+}
+
+.tour-shape h2{
+    position: absolute;
+    color: #fff;
+    
+}
+
+.gambar-tour {
+    display: flex;
+    justify-content: center;
+    
+}
+/* Rectangle 122 */
+.gambar-tour img {
+    width: 50%;
+}
+
+/* hero section */
+.hero-section {
+    background-image: url(/assets-tour/images/Rectangle\ 131.svg);
+}
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efefef;
+}
+.slide-container {
+    max-width: 1120px;
+    width: 100%;
+    
+    padding: 70px 0;
+}
+.slide-content {
+    overflow: hidden;
+    border-radius: 20px;
+     margin: 0 40px;
+
+
+}
+.card {
+   
+    border-radius: 25px;
+    background-color: #fff;
+}
+.image-content,
+.card-content {
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%; 
+    background-color:   #5E4930;
+    border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: -40px;
+    width: 40px;
+    height: 40px;
+    background-color: #5E4930;
+}
+.overlay::after {
+    border-radius: 0 25px 0 0;
+    background-color: #fff;
+}
+.card-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 3px;
+}
+
+
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4070f4;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+.description {
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+
+}
+
+.button {
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 16px;
+    background-color: #4070f4;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #265df2;
+}
+
+.swiper-navBtn {
+    color: #6e93f7;
+    transition: color 0.3s ease;
+}
+
+.swiper-navBtn:hover {
+    color: #4070f4;
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 40px;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+.swiper-button-prev {
+    left: 0;
+}
+.swiper-pagination.bullet {
+    background-color: #6e93f7;
+    opacity: 1;
+}
+
+.swiper-pagination.bullet-active {
+    background-color: #4070f4;
+}
+/* destinasi tour */
+/*.destinasi-tour-section {
+    padding: 20px;
+    background-color: #efefef;
+}
+*/
+.title-destinasi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    
+    padding: 10px;
+    width: 200px;
+    background: #C8B79E;
+    border-radius: 20px;
+
+}
+.tour-wraper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    justify-content: center;
+}
+
+.tour-item-container {
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+*/
+
+.destinasi-tour-section {
+    display: flex;
+    justify-content: center;
+    background-color: #efefef;
+}
+
+.title-destinasi {
+    padding: 20px;
+    background: #C8B79E;
+    border-radius: 20px;
+}
+
+.tour-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.tour-item-container {
+    background-color: #EBE3D5;
+    border-radius: 20px;
+    padding: 15px 20px;
+    text-align: center;
+    overflow: hidden;
+    
+}
+
+
+.item-tour-image {
+    position: relative;
+}
+
+.tour-gambar {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.h2-tittle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+}
+
+
+/* .item-tour-image .h2-tittle {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    margin: 0;  
+    background: rgba(0, 0, 0); 
+    border-radius: 0 0 20px 20px;
+}      */
+
+.h2-tittle h2 {
+    color: rgb(44, 43, 43);
+    margin: 0;
+    background: #EBE3D5;
+    padding: 10px;
+    border-radius: 0 8px 8px 8px;
+}
+.tour-gambar {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.tour-gambar {
+
+    border-radius: 20px;
+}
+
+.item-tour-image h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: rgb(41, 39, 39);
+    margin: 0;
+}
+
+.item-tour-description {
+    padding: 10px;      
+    display: flex;
+    justify-content: center;
+    
+}
+
+.item-tour-description span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.deskripsi-detail {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+    
+    /* Align the detail section to the right */
+}
+.item-utama {
+    display: flex;
+    flex-direction: column;
+    
+}
+.button-bayar a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #B0A695;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button-bayar .bayar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #B0A695;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.deskripsi-detail span {
+    background-color: #5E4930;
+    border-radius: 0px 10px 10px 0;
+    width: 1fr;
+    padding: 3px;
+    text-align: center;
+    
+}
+.item-utama span {
+    padding: 3px;
+    padding-right: 60px;
+    background-color: #F3EEEA;
+    border-radius: 10px 0px 0px 10px;
+}
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+    .tour-wrapper {
+        grid-template-columns: 1fr; /* Display one card per row on smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slide-content {
+        margin: 0 10px;
+    }
+    .swiper-navBtn {
+        display: none;
+    }    
+}
+
+footer {
+    background:black;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  .social-links{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+  }
+  .social-links a{
+    border: 2px solid #fff;
+    color: #fff;
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 0 0.3rem;
+    transition: all 0.5s ease;
+  }
+  .social-links a:hover {
+    background: #fff;
+    color: black;
+  }
+  .footer span{
+   margin-top: 1rem;
+   display: block;
+   letter-spacing: 2px; 
+  }
+

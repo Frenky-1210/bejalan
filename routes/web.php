@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\WisataController;
 use App\Http\Controllers\TourController;
+use App\Http\Controllers\TourguideController;
 use App\Http\Controllers\TranslatorController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
@@ -28,11 +29,11 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
+Route::get('/tourguide', [TourguideController::class, 'index'])->name('tourguide');
+
 Route::get('/post', [BlogController::class, 'post'])->name('post');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-Route::get('/tourguide', [TourController::class, 'tourguide'])->name('tourguide');
 
 Route::middleware(['guest'])->group(function(){
     Route::get('/login', [LoginController::class, 'index'])->name('login');
