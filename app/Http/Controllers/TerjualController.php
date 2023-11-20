@@ -18,15 +18,17 @@ class TerjualController extends Controller
     }
 
     public function checkout(Request $request){
-        $pesanan = Pesanan::find($request->input('pesanan_id'));
-
+         // Dapatkan pesanan terkait pengguna yang sedang masuk
+        $pesanan = auth()->user()->pesanan;
+        $terjual = Terjual::where('pesanan_id', $pesanan->id)->first();
+        // Setelah menyimpan pesanan, Anda dapat menggunakan $pesanan->id
         $request->request->add([
             'user_id' => auth()->user()->id,
-            'pesanan_id' => $pesanan->id,
+            'pesanan_id' => $request->input('pesanan'),
             'total_harga' => $request->jumlah_tiket * 100000,
             'status' => 'Unpaid'
         ]);
-        
+
         $check = Terjual::create($request->all());
     
         // Set your Merchant Server Key
@@ -51,6 +53,6 @@ class TerjualController extends Controller
         );
     
         $snapToken = \Midtrans\Snap::getSnapToken($params);
-        return view('checkout.checkout', compact('snapToken', 'check', 'pesanan'));
+        return view('checkout.check', compact('snapToken', 'check', 'pesanan', 'terjual'));
     }    
 }

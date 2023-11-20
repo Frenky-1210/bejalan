@@ -13,7 +13,7 @@
             <img src="{{asset('assets-tour/images/Rectangle 122.png')}}" alt="">
         </div>
     </div>
-        <!-- Di dalam bagian "hero-section" -->
+    <!-- Di dalam bagian "hero-section" -->
     <section class="hero-section">
         <div class="slide-container swiper">
             <div class="slide-content">
@@ -33,7 +33,7 @@
                             <p class="description">{{$tourr->pengalaman}}</p>
 
                             <!-- Ganti data-tourguide-id dengan ID yang sesuai -->
-                            <button type="submit" class="button">View More</button>
+                            <button type="submit" class="button" data-tour-id="{{ $tourr->id }}">View More</button>
                         </div>
                     </div>
                     @endforeach
@@ -52,7 +52,7 @@
         </div>
         <div class="tour-wrapper">
             @foreach($pesanan as $psn)
-            <div class="tour-item-container" data-pesananid="{{ $psn->id }}">
+            <div class="tour-item-container" data-pesananid="{{ $psn->tour_id }}" id="tour-card-{{ $psn->id }}">
                 <div class="item-tour-image">
                     <img src="{{ asset('storage/'. $psn->wisata->gambar) }}" alt="" style="width: 360px; height: 315px;" class="tour-gambar">
                     <div class="h2-tittle">
@@ -88,7 +88,7 @@
                 </div>
                 <div class="button-bayar">
                     @if(auth()->check())
-                        <a href="{{ route('terjual', ['pesanan_id' => $psn->id]) }}">Pesan</a>
+                        <a href="{{ route('terjual', ['pesanan_id' => $psn->id]) }}" id="pesan-link" class="pesan-link tombol-pesan" data-pesanan-id="{{ $psn->id }}">Pesan</a>
                     @else
                         <button class="bayar" onclick="tampilkanNotifikasi()">Pesan</button>
                     @endif
@@ -98,6 +98,65 @@
             <!-- Tambahkan tur lebih lanjut jika diperlukan -->
         </div>
     </section>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Menangani klik pada tombol "Pesan"
+            var tombolPesan = document.getElementById('pesan-link');
+    
+            if (tombolPesan) {
+                tombolPesan.addEventListener('click', function (event) {
+                    event.preventDefault();
+    
+                    // Ambil data pesanan_id dari atribut data pada tombol
+                    var pesananId = tombolPesan.getAttribute('data-pesanan-id');
+    
+                    // Perbarui input pesanan_id di formulir checkout
+                    var pesananInput = document.getElementById('pesanan');
+                    if (pesananInput) {
+                        pesananInput.value = pesananId;
+                        console.log('Pesanan ID telah diupdate:', pesananId);
+                    } else {
+                        console.log('Element dengan ID "pesanan" tidak ditemukan.');
+                    }
+                });
+            }
+        });
+    </script>
+    
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Menangani klik pada tombol "View More"
+            var viewMoreButtons = document.querySelectorAll('.hero-section .button');
+            viewMoreButtons.forEach(function (button) {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault();
+    
+                    // Mengambil ID tour dari atribut data
+                    var tourId = button.getAttribute('data-tour-id');
+    
+                    // Menyembunyikan semua destinasi-tour-section
+                    var allTourContainers = document.querySelectorAll('.tour-item-container');
+                    allTourContainers.forEach(function (container) {
+                        container.style.display = 'none';
+                    });
+    
+                    // Menampilkan semua destinasi-tour-section yang sesuai dengan ID tour yang diklik
+                    var tourContainers = document.querySelectorAll('.tour-item-container[data-pesananid="' + tourId + '"]');
+                    if (tourContainers.length > 0) {
+                        tourContainers.forEach(function (tourContainer) {
+                            tourContainer.style.display = 'block';
+                        });
+    
+                        // Setelah itu, scroll ke bagian destinasi-tour-section yang pertama jika perlu
+                        tourContainers[0].scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>    
 </body>
 
 <!-- swiper js -->

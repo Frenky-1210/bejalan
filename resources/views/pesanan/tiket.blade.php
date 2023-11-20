@@ -191,7 +191,7 @@
                                 <label for="kuota-add" class="control-label">
                                     <i class="fas fa-users"></i> Kuota
                                 </label>
-                                <input type="text" class="form-control @error('kuota') is-invalid @enderror" id="kuota-add" name="kuota" placeholder="Kuota">
+                                <input type="number" class="form-control @error('kuota') is-invalid @enderror" id="kuota-add" name="kuota" placeholder="Kuota">
                                 @error('kuota')
                                 <div class="alert alert-danger mt-2" role="alert">
                                     {{ $message }}

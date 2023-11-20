@@ -18,7 +18,7 @@ return new class extends Migration
                 $table->foreignId('pesanan_id')->constrained();
                 $table->integer('jumlah_tiket');
                 $table->string('total_harga');
-                $table->enum('status', ['Unpaid', 'Paid']);
+                $table->enum('status', ['Unpaid', 'Paid'])->default('Unpaid');
                 $table->timestamps();
             });
         }

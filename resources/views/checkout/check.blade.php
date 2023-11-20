@@ -15,36 +15,36 @@ data-client-key="{{config('midtrans.client_key')}}"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Pesanan</h1>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="{{asset('assets/images/Danau-Biru.jpg')}}" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Danau Biru</h5>
-              <table>
-                <tr>
-                    <td>User Id</td>
-                    <td>: {{$terjual->user_id}}</td>
-                </tr>
-                <tr>
-                    <td>Id Pesanan</td>
-                    <td>: {{$terjual->pesanan_id}}</td>
-                </tr>
-                <tr>
-                    <td>Jumlah Tiket</td>
-                    <td>: {{$terjual->jumlah_tiket}}</td>
-                </tr>
-                <tr>
-                    <td>Total Harga</td>
-                    <td>: {{$terjual->total_harga}}</td>
-                </tr>
-                <tr>
-                    <td>Status</td>
-                    <td>: {{$terjual->Status}}</td>
-                </tr>
-              </table>
-              <button type="submit" class="btn btn-primary" id="pay-button">Check Out</button>
-            </div>
-        </div>
+      <h1>Pesanan</h1>
+      <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{{asset('assets/images/Danau-Biru.jpg')}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Danau Biru</h5>
+            <table>
+              <tr>
+                  <td>User Id</td>
+                  <td>: {{$terjual->user_id}}</td>
+              </tr>
+              <tr>
+                  <td>Id Pesanan</td>
+                  <td>: {{$terjual->pesanan_id}}</td>
+              </tr>
+              <tr>
+                  <td>Jumlah Tiket</td>
+                  <td>: {{$terjual->jumlah_tiket}}</td>
+              </tr>
+              <tr>
+                  <td>Total Harga</td>
+                  <td>: {{$terjual->total_harga}}</td>
+              </tr>
+              <tr>
+                  <td>Status</td>
+                  <td>: {{$terjual->Status}}</td>
+              </tr>
+            </table>
+            <button type="submit" class="btn btn-primary" id="pay-button">Check Out</button>
+          </div>
+      </div>
     </div>
 
     <script type="text/javascript">
