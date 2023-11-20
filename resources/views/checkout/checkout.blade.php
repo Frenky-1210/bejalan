@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Check Out</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
@@ -19,19 +19,13 @@
               <form action="{{route('checkout')}}" method="POST">
                 @csrf
                 <div class="mb-3">
-                    <label for="name">Name</label>
+                    <label for="name">Nama</label>
                     <input type="text" id="name" name="name" class="form-control" placeholder="{{ auth()->user()->name }}" disabled>
                 </div>
-                <div class="mb-3">
-                    <label for="pesanan_id">Pesanan Destinasi</label>
-                    <select id="pesanan_id" name="pesanan_id" class="form-control">
-                        <!-- Populate this dropdown with data from the 'Pesanan' model or another source -->
-                        <!-- Example: -->
-                        @foreach ($pesanan as $pesan)
-                            <option value="{{ $pesan->id }}">{{ $pesan->id }}</option>
-                        @endforeach
-                    </select>
-                </div>
+    <div class="mb-3">
+        <label for="name">Destinasi</label>
+        <input type="text" id="destinasi" name="destinasi" class="form-control" placeholder="{{ $pesanan->wisata->tempat_wisata }}" disabled>
+    </div>
                 <div class="mb-3">
                     <label for="jumlah_tiket">Jumlah Tiket</label>
                     <input type="number" class="form-control" id="jumlah_tiket" name="jumlah_tiket" placeholder="Jumlah Tiket">
