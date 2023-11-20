@@ -32,6 +32,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
 Route::get('/terjual', [TerjualController::class, 'index'])->name('terjual');
+Route::post('/checkout', [TerjualController::class, 'checkout'])->name('checkout');
 
 Route::get('/tourguide', [TourguideController::class, 'index'])->name('tourguide');
 

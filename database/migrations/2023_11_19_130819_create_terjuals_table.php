@@ -15,7 +15,6 @@ return new class extends Migration
             Schema::create('terjuals', function (Blueprint $table) {
                 $table->id();
                 $table->foreignId('user_id')->constrained();
-                $table->string('nama_lengkap');
                 $table->foreignId('pesanan_id')->constrained();
                 $table->integer('jumlah_tiket');
                 $table->string('total_harga');

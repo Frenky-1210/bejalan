@@ -4,8 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use app\Models\Tour;
-use app\Models\Wisata;
+use App\Models\Tour;
+use App\Models\Wisata;
 
 class Pesanan extends Model
 {

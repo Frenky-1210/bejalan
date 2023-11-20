@@ -16,28 +16,29 @@
             <div class="card-body">
               <h5 class="card-title">Danau Biru</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <form action="#" method="POST">
+              <form action="{{route('checkout')}}" method="POST">
                 @csrf
                 <div class="mb-3">
-                    <fieldset disabled>
-                        <label for="disabledTextInput">Name</label>
-                        <input type="text" id="disabledTextInput" class="form-control" placeholder="{{ auth()->user()->name }}">
-                    </fieldset>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="{{ auth()->user()->name }}" disabled>
                 </div>
                 <div class="mb-3">
-                    <fieldset disabled>
-                        <label for="disabledTextInput">Destinasi</label>
-                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Danau Biru">
-                    </fieldset>
+                    <label for="pesanan_id">Pesanan Destinasi</label>
+                    <select id="pesanan_id" name="pesanan_id" class="form-control">
+                        <!-- Populate this dropdown with data from the 'Pesanan' model or another source -->
+                        <!-- Example: -->
+                        @foreach ($pesanan as $pesan)
+                            <option value="{{ $pesan->id }}">{{ $pesan->id }}</option>
+                        @endforeach
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label for="jumlah_tiket">Jumlah Tiket</label>
-                    <input type="number" class="form-control" id="jumlah_tikey" placeholder="Jumlah Tiket">
+                    <input type="number" class="form-control" id="jumlah_tiket" name="jumlah_tiket" placeholder="Jumlah Tiket">
                 </div>
                 <button type="submit" class="btn btn-primary">Check Out</button>
                 <a href="{{route('tourguide')}}" type="button" class="btn btn-danger">Batal</a>
               </form>
-              
             </div>
         </div>
     </div>

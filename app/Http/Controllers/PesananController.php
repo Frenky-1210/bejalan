@@ -42,7 +42,7 @@ class PesananController extends Controller
             'waktu_end' => 'required',
             'fasilitas' => 'required',
             'biaya' => 'required',
-            'kuota' => 'required'
+            'kuota' => 'required'   
         ]);
         
         $pesanan = new Pesanan([

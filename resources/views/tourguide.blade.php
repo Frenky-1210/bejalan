@@ -52,7 +52,7 @@
         </div>
         <div class="tour-wrapper">
             @foreach($pesanan as $psn)
-            <div class="tour-item-container">
+            <div class="tour-item-container" data-pesananid="{{ $psn->id }}">
                 <div class="item-tour-image">
                     <img src="{{ asset('storage/'. $psn->wisata->gambar) }}" alt="" style="width: 360px; height: 315px;" class="tour-gambar">
                     <div class="h2-tittle">
@@ -88,7 +88,7 @@
                 </div>
                 <div class="button-bayar">
                     @if(auth()->check())
-                        <a href="{{route('terjual')}}">Pesan</a>
+                        <a href="{{ route('terjual', ['pesanan_id' => $psn->id]) }}">Pesan</a>
                     @else
                         <button class="bayar" onclick="tampilkanNotifikasi()">Pesan</button>
                     @endif
