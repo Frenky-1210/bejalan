@@ -20,7 +20,6 @@ class TerjualController extends Controller
     public function checkout(Request $request){
          // Dapatkan pesanan terkait pengguna yang sedang masuk
         $pesanan = auth()->user()->pesanan;
-        $terjual = Terjual::where('pesanan_id', $pesanan->id)->first();
         // Setelah menyimpan pesanan, Anda dapat menggunakan $pesanan->id
         $request->request->add([
             'user_id' => auth()->user()->id,
@@ -43,16 +42,18 @@ class TerjualController extends Controller
         $params = array(
             'transaction_details' => array(
                 'order_id' => $check->id,
-                'gross_amount' => $check->total_harga,
+                'user_id' => $check->user_id,
+                'pesanan_id' => $check->pesanan_id,
+                'jumlah_tiket' => $check->jumlah_tiket,
+                'gross_amount' => $check->total_harga
             ),
             'customer_details' => array(
                 'name' => auth()->user()->id,
-                'email' => 'budi.pra@example.com',
-                'phone' => '08111222333',
+                'email' => auth()->user()->email,
             ),
-        );
+        );        
     
         $snapToken = \Midtrans\Snap::getSnapToken($params);
-        return view('checkout.check', compact('snapToken', 'check', 'pesanan', 'terjual'));
+        return view('checkout.check', compact('snapToken', 'check', 'pesanan'));
     }    
 }
