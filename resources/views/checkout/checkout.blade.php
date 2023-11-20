@@ -22,10 +22,12 @@
                     <label for="name">Nama</label>
                     <input type="text" id="name" name="name" class="form-control" placeholder="{{ auth()->user()->name }}" disabled>
                 </div>
-    <div class="mb-3">
-        <label for="name">Destinasi</label>
-        <input type="text" id="destinasi" name="destinasi" class="form-control" placeholder="{{ $pesanan->wisata->tempat_wisata }}" disabled>
-    </div>
+                @foreach ($pesanan as $item)
+                <div class="mb-3">
+                    <label for="name">Destinasi</label>
+                    <input type="text" id="destinasi" name="destinasi" class="form-control" placeholder="{{ $item->wisata->tempat_wisata }}" disabled>
+                </div>
+                @endforeach
                 <div class="mb-3">
                     <label for="jumlah_tiket">Jumlah Tiket</label>
                     <input type="number" class="form-control" id="jumlah_tiket" name="jumlah_tiket" placeholder="Jumlah Tiket">
