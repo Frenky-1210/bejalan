@@ -100,27 +100,16 @@
     </section>
     
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Menangani klik pada tombol "Pesan"
-            var tombolPesan = document.getElementById('pesan-link');
-    
-            if (tombolPesan) {
-                tombolPesan.addEventListener('click', function (event) {
-                    event.preventDefault();
-    
-                    // Ambil data pesanan_id dari atribut data pada tombol
-                    var pesananId = tombolPesan.getAttribute('data-pesanan-id');
-    
-                    // Perbarui input pesanan_id di formulir checkout
-                    var pesananInput = document.getElementById('pesanan');
-                    if (pesananInput) {
-                        pesananInput.value = pesananId;
-                        console.log('Pesanan ID telah diupdate:', pesananId);
-                    } else {
-                        console.log('Element dengan ID "pesanan" tidak ditemukan.');
-                    }
+        document.addEventListener('DOMContentLoaded', function() {
+            var pesanLinks = document.querySelectorAll('.pesan-link');
+
+            pesanLinks.forEach(function(pesanLink) {
+                pesanLink.addEventListener('click', function() {
+                    var pesananId = pesanLink.getAttribute('data-pesanan-id');
+                    // Redirect ke halaman checkout dengan menyertakan pesanan_id sebagai parameter
+                    window.location.href = "/checkout?pesanan_id=" + pesananId;
                 });
-            }
+            });
         });
     </script>
     

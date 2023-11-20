@@ -23,8 +23,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="pesanan">Pesanan ID</label>
-                    <input type="text" class="form-control" id="pesanan" name="pesanan" value="2" placeholder="Pesanan ID" readonly>
-                </div>
+                    <input type="text" class="form-control" id="pesanan" name="pesanan" placeholder="Pesanan ID" readonly>
+                </div>                
                 <div class="mb-3">
                     <label for="jumlah_tiket">Jumlah Tiket</label>
                     <input type="number" class="form-control" id="jumlah_tiket" name="jumlah_tiket" placeholder="Jumlah Tiket">
@@ -35,15 +35,15 @@
             </div>
         </div>
     </div>
- 
+
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var pesananInput = document.getElementById('pesanan');
-            if (pesananInput) {
-                // Lakukan sesuatu dengan pesananInput
-            } else {
-                console.log('Element dengan ID "pesanan" tidak ditemukan.');
-            }
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ambil nilai pesanan_id dari URL
+            var urlParams = new URLSearchParams(window.location.search);
+            var pesananId = urlParams.get('pesanan_id');
+
+            // Set nilai pesanan_id ke input pesanan
+            document.getElementById('pesanan').value = pesananId;
         });
     </script>
 </body>

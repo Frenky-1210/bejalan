@@ -51,8 +51,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         var payButton = document.getElementById('pay-button');
         payButton.addEventListener('click', function () {
-            // Gantilah YOUR_CLIENT_KEY dan YOUR_SNAP_TOKEN dengan nilai sesuai kebutuhan
-            snap.pay('{{$snapToken}}', {
+            snap.pay("{{$snapToken}}", {
                 onSuccess: function (result) {
                     alert("Pembayaran berhasil!"); console.log(result);
                 },
