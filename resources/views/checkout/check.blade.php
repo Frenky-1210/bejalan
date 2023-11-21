@@ -21,7 +21,7 @@
             <table class="table">
                 <tr>
                     <td>Nama</td>
-                    <td>: {{$check->user_id}}</td>
+                    <td>: {{$check->user->name}}</td>
                 </tr>
                 <tr>
                     <td>Id Pesanan</td>

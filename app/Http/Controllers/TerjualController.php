@@ -51,7 +51,7 @@ class TerjualController extends Controller
                 'name' => auth()->user()->id,
                 'email' => auth()->user()->email,
             ),
-        );        
+        );
     
         $snapToken = \Midtrans\Snap::getSnapToken($params);
         return view('checkout.check', compact('snapToken', 'check', 'pesanan'));

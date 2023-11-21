@@ -27,7 +27,7 @@
                 </div>                
                 <div class="mb-3">
                     <label for="jumlah_tiket">Jumlah Tiket</label>
-                    <input type="number" class="form-control" id="jumlah_tiket" name="jumlah_tiket" placeholder="Jumlah Tiket">
+                    <input type="number" class="form-control" id="jumlah_tiket" name="jumlah_tiket" placeholder="Jumlah Tiket" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Pesan</button>
                 <a href="{{ route('tourguide') }}" type="button" class="btn btn-danger">Batal</a>
@@ -35,7 +35,7 @@
             </div>
         </div>
     </div>
-
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Ambil nilai pesanan_id dari URL
