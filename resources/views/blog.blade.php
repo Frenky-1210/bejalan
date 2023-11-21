@@ -87,31 +87,35 @@
 <div class="container-2">
     <div class="box-title-wisata">
         <h2>Destinasi <span class="pulau-bintan">Pulau Bintan</span> </h2>
-            <hr>
-                <p>Bingung Mencari Destinasi Wisata Di Pulau Bintan? Berikut Ini Adalah Rekomendasi Destinasi Wisata Yang dapat Anda Pilih Di pulau Bintan! Selamat berwisata</p>
+        <hr>
+        <p>Bingung Mencari Destinasi Wisata Di Pulau Bintan? Berikut Ini Adalah Rekomendasi Destinasi Wisata Yang dapat Anda Pilih Di pulau Bintan! Selamat berwisata</p>
     </div>
     <div class="box-container-1">
         <div class="box-wisata">
-            @foreach($wisata as $value)
-            <article class="card-article-1">
-                <img src="{{ asset('storage/'. $value->gambar) }}" alt="" class="image-populer-1" style="width: 369px; height: 373px;">
-                <div class="box-overlay-popular-1">
-                    <span class="hearth">
-                        <i class="fa fa-heart"></i>
-                    </span> 
-                    <h1 class="card-title-1">{{ $value->tempat_wisata }}</h1>
-                    <hr>
-                    <p class="card-data-1">{{ Str::limit($value->deskripsi, 448) }}</p>
-                    <a href="{{ route('post', ['id' => $value->id]) }}" class="button-wisata">Read More <i class="fa fa-arrow-right"></i></a>
-                </div>
-            </article>
-            @endforeach
+            @forelse($wisata as $value)
+                <article class="card-article-1">
+                    <img src="{{ asset('storage/'. $value->gambar) }}" alt="" class="image-populer-1" style="width: 369px; height: 373px;">
+                    <div class="box-overlay-popular-1">
+                        <span class="hearth">
+                            <i class="fa fa-heart"></i>
+                        </span> 
+                        <h1 class="card-title-1">{{ $value->tempat_wisata }}</h1>
+                        <hr>
+                        <p class="card-data-1">{{ Str::limit($value->deskripsi, 448) }}</p>
+                        <a href="{{ route('post', ['id' => $value->id]) }}" class="button-wisata">Read More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            @empty
+                <p>No data found</p>
+            @endforelse
         </div>
     </div>
+    
     <div class="custom-pagination">
         {{ $wisata->links() }}
     </div>
 </div>
+
 
 <div class="container-3">
     <div class="box-container-1">
