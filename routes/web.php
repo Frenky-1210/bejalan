@@ -12,8 +12,10 @@ use App\Http\Controllers\TranslatorController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PesananController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\TerjualController;
 use App\Http\Controllers\VerificationController;
+use Faker\Provider\ar_EG\Payment;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -52,6 +54,7 @@ Route::middleware(['auth'])->group( function() {
     Route::resource('/wisata', WisataController::class);
     Route::resource('/pesanan', PesananController::class);
     Route::resource('/translator', TranslatorController::class);
+    Route::resource('/payment', PaymentController::class);
     Route::resource('/tour', TourController::class);
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('userAkses:Admin');
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

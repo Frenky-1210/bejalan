@@ -36,6 +36,7 @@
             <div class="collapse" id="p">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="{{route('pesanan.index')}}">Data Tiket</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{route('payment.index')}}">Data Payment</a></li>
               </ul>
             </div>
           </li>
