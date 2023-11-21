@@ -2,7 +2,7 @@
 
 @section('container')
 <body>
-    <div class="tour">
+    <!-- <div class="tour">
         <div class="tour-shape">
             <svg width="75%" height="70%" viewBox="0 0 1078 105" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M43.9863 29.518C25.8129 26.8085 27.8004 0 46.1746 0H1026.38C1044.44 0 1046.36 26.3685 1028.49 28.992C1012.61 31.3231 1011.61 53.8621 1027.23 57.5863L1060.6 65.5458C1083.66 71.048 1079.67 105 1055.96 105H20.1717C-3.60812 105 -7.52266 70.9107 15.6382 65.5206L45.1617 58.6496C61.1074 54.9386 60.1791 31.9322 43.9863 29.518Z" fill="#70480C" />
@@ -12,7 +12,7 @@
         <div class="gambar-tour">
             <img src="{{asset('assets-tour/images/Rectangle 122.png')}}" alt="">
         </div>
-    </div>
+    </div> -->
     <!-- Di dalam bagian "hero-section" -->
     <section class="hero-section">
         <div class="slide-container swiper">
