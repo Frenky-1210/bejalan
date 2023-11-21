@@ -10,11 +10,12 @@
 <body>
     <div class="container">
         <h1 class="my-3 text-center">Pesanan</h1>
+        @foreach ($pesanan as $pesananItem)
         <div class="card mx-auto w-75" style="width: 18rem;">
             <img style="max-height: 200px; object-fit: cover; width: 100%;" class="card-img-top" src="{{ asset('assets/images/Danau-Biru.jpg') }}" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">Danau Biru</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 class="card-title">{{$pesananItem->wisata->tempat_wisata}}</h5>
+              <p class="card-text">{{$pesananItem->wisata->deskripsi}}</p>
               <form action="{{ route('checkout') }}" method="POST" id="checkoutForm">
                 @csrf
                 <div class="mb-3">
@@ -34,6 +35,7 @@
             </form>            
             </div>
         </div>
+        @endforeach
     </div>
     
     <script>

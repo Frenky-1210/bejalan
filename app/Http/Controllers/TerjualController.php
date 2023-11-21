@@ -18,7 +18,7 @@ class TerjualController extends Controller
     }
 
     public function checkout(Request $request){
-         // Dapatkan pesanan terkait pengguna yang sedang masuk
+        // Dapatkan pesanan terkait pengguna yang sedang masuk
         $pesanan = auth()->user()->pesanan;
         // Setelah menyimpan pesanan, Anda dapat menggunakan $pesanan->id
         $request->request->add([
