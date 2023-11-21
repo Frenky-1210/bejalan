@@ -61,3 +61,114 @@
     </div>
 </div>
 @endsection
+
+<!-- Start Modal Add -->
+<div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 1000px;">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
+                <button type="button" class="btn-close btn-close-white" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <form action="#" method="POST" enctype="multipart/form-data">
+                {{ csrf_field() }}
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="hidden" id="post_id">
+                            
+                            <div class="form-group">
+                                <label for="tour" class="control-label">
+                                    <i class="fas fa-user"></i> Nama Tour Guide
+                                </label>
+                                <input type="text" class="form-control @error('nama_tourguide') is-invalid @enderror" id="nama_tourguide-add" name="nama_tourguide" placeholder="Nama Tour Guide">
+                                @error('nama_tourguide')
+                                <div class="alert alert-danger mt-2" role="alert">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+
+                            <!-- Umur -->
+                            <div class="form-group">
+                                <label for="age" class="control-label">
+                                    <i class="fas fa-birthday-cake"></i> Umur
+                                </label>
+                                <input type="text" class="form-control @error('umur') is-invalid @enderror" id="umur-add" name="umur" placeholder="Umur">
+                                @error('umur')
+                                <div class="alert alert-danger mt-2" role="alert">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+
+                            <!-- Jenis Kelamin -->
+                            <div class="form-group">
+                                <label for="gender" class="control-label">
+                                    <i class="fas fa-venus-mars"></i> Jenis Kelamin
+                                </label>
+                                <select class="form-control @error('jenis_kelamin') is-invalid @enderror" id="jenis_kelamin-add" name="jenis_kelamin">
+                                    <option value="Pria">Pria</option>
+                                    <option value="Wanita">Wanita</option>
+                                </select>
+                                @error('jenis_kelamin')
+                                <div class="alert alert-danger mt-2" role="alert">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+
+                            <!-- Pengalaman -->
+                            <div class="form-group">
+                                <label class="control-label">
+                                    <i class="fas fa-star"></i> Pengalaman
+                                </label>
+                                <textarea class="form-control @error('pengalaman') is-invalid @enderror" id="pengalaman-add" name="pengalaman" rows="4" placeholder="Pengalaman"></textarea>
+                                @error('pengalaman')
+                                <div class="alert alert-danger mt-2" role="alert">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <!-- No Telp -->
+                            <div class="form-group">
+                                <label for="hp" class="control-label">
+                                    <i class="fas fa-phone"></i> No Telp
+                                </label>
+                                <input type="number" class="form-control @error('no_telp') is-invalid @enderror" id="no_telp-add" name="no_telp" placeholder="No Telp">
+                                @error('no_telp')
+                                <div class="alert alert-danger mt-2" role="alert">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+
+                            <!-- Menambahkan input file untuk memilih gambar -->
+                            <div class="form-group">
+                                <label for="image-add" class="control-label">
+                                    <i class="fas fa-image"></i> Choose Image
+                                </label>
+                                <img id="imagePreview" src="#" class="img-preview img-fluid mb-3 col-sm-5" alt="Preview" style="max-width: 50%; max-height: 300px; display: none;">
+                                <input type="file" class="form-control @error('foto') is-invalid @enderror" id="image-add" name="foto" accept="image/*" onchange="previewImage()">
+                                @error('foto')
+                                <div class="alert alert-danger mt-2" role="alert">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success add_data">Tambah</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- End Modal Add -->  
