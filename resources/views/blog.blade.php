@@ -10,7 +10,7 @@
         </div>
         <div class="box-populer">
             <article class="card-article">
-                <img src="{{asset('assets/images/thumbnail.jpg')}}" alt="" class="image-populer">
+                <img src="{{asset('assets/images/crystal-populer.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px;">
                 <div class="card-overlay-popular">
                     <h1 class="title_card">Crystal Lagoon</h1>
                 </div>
@@ -22,60 +22,60 @@
             </article>
             
             <article class="card-article">
-                <img src="{{asset('assets/images/thumbnail.jpg')}}" alt="" class="image-populer">
+                <img src="{{asset('assets/images/pantai-pengudang.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px;">
                 <div class="card-overlay-popular">
-                    <h1 class="title_card">Crystal Lagoon</h1>
+                    <h1 class="title_card">Pantai Pengudang</h1>
                 </div> 
                 <div class="box-overlay-popular">
-                    <h1 class="card-title">Crystal Lagoon</h1>
+                    <h1 class="card-title">Pantai Pengudang</h1>
                     <hr>
                     <p class="card-data">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore aut optio rem placeat molestias animi architecto dolorum sapiente consequuntur natus molestiae, modi ullam eveniet? Explicabo ipsa facere dolor quos?</p>
                 </div>
             </article>
 
             <article class="card-article">
-                <img src="{{asset('assets/images/thumbnail.jpg')}}" alt="" class="image-populer">
+                <img src="{{asset('assets/images/kampung-wisata.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px;">
                 <div class="card-overlay-popular">
-                    <h1 class="title_card">Crystal Lagoon</h1>
+                    <h1 class="title_card">Kampung Wisata Panglong</h1>
                 </div>
                 <div class="box-overlay-popular">
-                    <h1 class="card-title">Crystal Lagoon</h1>
+                    <h1 class="card-title">Kampung Wisata Panglong</h1>
                     <hr>
                     <p class="card-data">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore aut optio rem placeat molestias animi architecto dolorum sapiente consequuntur natus molestiae, modi ullam eveniet? Explicabo ipsa facere dolor quos?</p>
                 </div>
             </article>
 
             <article class="card-article">
-                <img src="{{asset('assets/images/thumbnail.jpg')}}" alt="" class="image-populer">
+                <img src="{{asset('assets/images/senggiling.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px;">
                 <div class="card-overlay-popular">
-                    <h1 class="title_card">Crystal Lagoon</h1>
+                    <h1 class="title_card">Pantai Senggiling</h1>
                 </div>
                 <div class="box-overlay-popular">
-                    <h1 class="card-title">Crystal Lagoon</h1>
+                    <h1 class="card-title">Pantai Senggiling</h1>
                     <hr>
                     <p class="card-data">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore aut optio rem placeat molestias animi architecto dolorum sapiente consequuntur natus molestiae, modi ullam eveniet? Explicabo ipsa facere dolor quos?</p>
                 </div>
             </article>
 
             <article class="card-article">
-                <img src="{{asset('assets/images/thumbnail.jpg')}}" alt="" class="image-populer">
+                <img src="{{asset('assets/images/Vihara Avalokitesvara Graha.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px;">
                 <div class="card-overlay-popular">
-                    <h1 class="title_card">Crystal Lagoon</h1>
+                    <h1 class="title_card">Vihara Avalokitesvara Graha</h1>
                 </div>
                 <div class="box-overlay-popular">
-                    <h1 class="card-title">Crystal Lagoon</h1>
+                    <h1 class="card-title">Vihara Avalokitesvara Graha</h1>
                     <hr>
                     <p class="card-data">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore aut optio rem placeat molestias animi architecto dolorum sapiente consequuntur natus molestiae, modi ullam eveniet? Explicabo ipsa facere dolor quos?</p>
                 </div>
             </article>
 
              <article class="card-article">
-                <img src="{{asset('assets/images/thumbnail.jpg')}}" alt="" class="image-populer">
+                <img src="{{asset('assets/images/Wihara Pohon Banyan.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px;">
                 <div class="card-overlay-popular">
-                    <h1 class="title_card">Crystal Lagoon</h1>
+                    <h1 class="title_card">Wihara Pohon Banyan</h1>
                 </div>
                 <div class="box-overlay-popular">
-                    <h1 class="card-title">Crystal Lagoon</h1>
+                    <h1 class="card-title">Wihara Pohon Banyan</h1>
                     <hr>
                     <p class="card-data">Lorem ipsum dolor siti amet consectetur adipisicing elit. Recusandae labore aut optio rem placeat molestias animi architecto dolorum sapiente consequuntur natus molestiae, modi ullam eveniet? Explicabo ipsa facere dolor quos?</p>
                 </div>
@@ -109,11 +109,15 @@
                 <p>No data found</p>
             @endforelse
         </div>
-    </div>
-    
-    <div class="custom-pagination">
+        <div class="paginate">
         {{ $wisata->links() }}
-    </div>
+            </div>
+        </div>
+        
+        
+        
+        
+    
 </div>
 
 
