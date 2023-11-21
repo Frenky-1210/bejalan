@@ -18,4 +18,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/payment-callback', [TerjualController::class, 'callback'])->name('callback');
+Route::post('/payment-callback', [TerjualController::class, 'callback']);
+

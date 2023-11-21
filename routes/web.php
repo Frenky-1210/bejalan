@@ -14,7 +14,6 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PesananController;
 use App\Http\Controllers\TerjualController;
 use App\Http\Controllers\VerificationController;
-use App\Models\Terjual;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -30,14 +29,13 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+Route::get('/post/{id}',[BlogController::class, 'post'])->name('post');
 
 Route::get('/terjual', [TerjualController::class, 'index'])->name('terjual');
 Route::post('/checkout', [TerjualController::class, 'checkout'])->name('checkout');
-
+Route::get('/invoice/{id}', [TerjualController::class, 'invoice']);
 
 Route::get('/tourguide', [TourguideController::class, 'index'])->name('tourguide');
-
-Route::get('/post/{id}',[BlogController::class, 'post'])->name('post');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
@@ -58,15 +56,6 @@ Route::middleware(['auth'])->group( function() {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('userAkses:Admin');
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 });
-
-
-// Route::get('/foto_destinasi/{filename}', 'FotoDestinasiController@show')->where('filename', '(.*)')->name('public.foto_destinasi.show');
-// Route::get('/wisata/{wisatum}/edit', 'WisataController@edit');
-// Route::put('/wisata/{wisatum}', 'WisataController@update');
-// Route::delete('wisata/{id}', 'WisataController@destroy')->name('wisata.destroy');
-// Route::delete('/destroy/{id}', [TourController::class, 'destroy'])->name('tour.destroy');
-// Route::resource('/update-wisata', 'WisataController@updateData')->name('wisata.update');
-// Route::get('info/{id}', [WisataController::class, 'show'])->name('wisata.show');
 
 
 

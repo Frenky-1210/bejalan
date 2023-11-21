@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Pesanan;
 use App\Models\Terjual;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class TerjualController extends Controller
 {
@@ -33,7 +34,7 @@ class TerjualController extends Controller
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = config('midtrans.server_key');
         // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
-        \Midtrans\Config::$isProduction = false;
+        \Midtrans\Config::$isProduction = true;
         // Set sanitization on (default)
         \Midtrans\Config::$isSanitized = true;
         // Set 3DS transaction for credit card to true
@@ -61,12 +62,17 @@ class TerjualController extends Controller
     
     public function callback(Request $request){
         $serverKey = config('midtrans.server_key');
-        $hashed =hash("sha512", $request->order_id.$request->status_code.$request->gross_amount.$serverKey);
-        if ($hashed == $request) {
-            if ($request->transaction_status == 'capture') {
+        $hashed = hash("sha512", $request->order_id.$request->status_code.$request->gross_amount.$serverKey);
+        if($hashed == $request->signature_key) {
+            if($request->transaction_status == 'capture') {
                 $check = Terjual::find($request->order_id);
                 $check->update(['status' => 'Paid']);
             }
         }
+    }
+
+    public function invoice($id){
+        $check = Terjual::find($id);
+        return view('checkout.invoice', compact('check'));
     }
 }

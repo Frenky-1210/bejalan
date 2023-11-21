@@ -54,12 +54,12 @@
             <h2>Destinasi Tour</h2>
         </div>
         <div class="tour-wrapper">
-            @foreach($pesanan as $psn)
+            @foreach($pesanan as $psn)  
             <div class="tour-item-container" data-pesananid="{{ $psn->tour_id }}" id="tour-card-{{ $psn->id }}">
                 <div class="item-tour-image">
                     <img src="{{ asset('storage/'. $psn->wisata->gambar) }}" alt="" style="width: 360px; height: 315px;" class="tour-gambar">
                     <div class="h2-tittle">
-                        <h2>{{$psn->wisata->tempat_wisata}}</h2>
+                        <h2>{{ $psn->wisata->tempat_wisata }}</h2>
                     </div>
                 </div>
                 <div class="item-tour-description">
@@ -79,13 +79,13 @@
                             <p>{{ date('g:i A', strtotime($psn->waktu_start)) }} - {{ date('g:i A', strtotime($psn->waktu_end)) }}</p>
                         </span>
                         <span class="detail-item guide">
-                            <p>{{$psn->tour->nama_tourguide}}</p>
+                            <p>{{ $psn->tour->nama_tourguide }}</p>
                         </span>
                         <span class="detail-item fasilitas">
-                            <p>{{$psn->fasilitas}}</p>
+                            <p>{{ $psn->fasilitas }}</p>
                         </span>
                         <span class="detail-item biaya">
-                            <p>{{$psn->biaya}}</p>
+                            <p>{{ $psn->biaya }}</p>
                         </span>
                     </div>
                 </div>

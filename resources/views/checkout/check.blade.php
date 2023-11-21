@@ -7,7 +7,7 @@
     <title>Document</title>
 
     <!-- @TODO: replace SET_YOUR_CLIENT_KEY_HERE with your client key -->
-    <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="{{ config('midtrans.client_key') }}"></script>
+    <script type="text/javascript" src="{{config('midtrans.snap_url')}}" data-client-key="{{ config('midtrans.client_key') }}"></script>
     <!-- Note: replace with src="https://app.midtrans.com/snap/snap.js" for Production environment -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
@@ -35,10 +35,6 @@
                     <td>Total Harga</td>
                     <td>: Rp {{$check->total_harga}}</td>
                 </tr>
-                <tr>
-                    <td>Status</td>
-                    <td>: {{$check->status}}</td>
-                </tr>
               </table>
               <button type="submit" class="btn btn-primary" id="pay-button">Bayar</button>
           </div>
@@ -53,7 +49,9 @@
         payButton.addEventListener('click', function () {
             snap.pay("{{$snapToken}}", {
                 onSuccess: function (result) {
-                    alert("Pembayaran berhasil!"); console.log(result);
+                    alert("Pembayaran berhasil!");
+                    window.location.href = '/invoice/{{$check->id}}'
+                    console.log(result);
                 },
                 onPending: function (result) {
                     alert("Menunggu pembayaran!"); console.log(result);
