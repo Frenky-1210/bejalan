@@ -38,6 +38,8 @@ class TerjualController extends Controller
         \Midtrans\Config::$isSanitized = true;
         // Set 3DS transaction for credit card to true
         \Midtrans\Config::$is3ds = true;
+
+
     
         $params = array(
             'transaction_details' => array(
@@ -55,5 +57,16 @@ class TerjualController extends Controller
     
         $snapToken = \Midtrans\Snap::getSnapToken($params);
         return view('checkout.check', compact('snapToken', 'check', 'pesanan'));
-    }    
+    }
+    
+    public function callback(Request $request){
+        $serverKey = config('midtrans.server_key');
+        $hashed =hash("sha512", $request->order_id.$request->status_code.$request->gross_amount.$serverKey);
+        if ($hashed == $request) {
+            if ($request->transaction_status == 'capture') {
+                $check = Terjual::find($request->order_id);
+                $check->update(['status' => 'Paid']);
+            }
+        }
+    }
 }

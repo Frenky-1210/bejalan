@@ -10,7 +10,7 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $wisata = Wisata::paginate(9); // Adjust the number to specify how many records to display per page.
+        $wisata = Wisata::paginate(6); // Adjust the number to specify how many records to display per page.
         return view('blog', compact('wisata'));
     }
 
