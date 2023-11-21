@@ -116,8 +116,6 @@
         });
     </script>
     
-
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Menangani klik pada tombol "View More"

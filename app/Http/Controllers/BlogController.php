@@ -14,8 +14,9 @@ class BlogController extends Controller
         return view('blog', compact('wisata'));
     }
 
-    public function post()
-    {; // Adjust the number to specify how many records to display per page.
-        return view('post');
+    public function post($id)
+    {
+        $wisata = Wisata::where('id', $id)->first();
+        return view('post', compact('wisata'));
     }
 }

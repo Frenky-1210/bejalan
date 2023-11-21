@@ -102,14 +102,14 @@
                     <h1 class="card-title-1">{{ $value->tempat_wisata }}</h1>
                     <hr>
                     <p class="card-data-1">{{ Str::limit($value->deskripsi, 448) }}</p>
-                    <a href="{{route('post')}}" class="button-wisata">Read More <i class="fa fa-arrow-right"></i></a>
+                    <a href="{{ route('post', ['id' => $value->id]) }}" class="button-wisata">Read More <i class="fa fa-arrow-right"></i></a>
                 </div>
             </article>
             @endforeach
         </div>
-        <div class="custom-pagination">
-            {{ $wisata->links() }}
-        </div>
+    </div>
+    <div class="custom-pagination">
+        {{ $wisata->links() }}
     </div>
 </div>
 

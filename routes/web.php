@@ -37,7 +37,7 @@ Route::post('/checkout', [TerjualController::class, 'checkout'])->name('checkout
 
 Route::get('/tourguide', [TourguideController::class, 'index'])->name('tourguide');
 
-Route::get('/post', [BlogController::class, 'post'])->name('post');
+Route::get('/post/{id}',[BlogController::class, 'post'])->name('post');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 

@@ -1,0 +1,138 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Convergence&family=Doppio+One&family=Dosis:wght@300;600&family=Fredoka:wght@500&family=Hammersmith+One&family=Marko+One&family=Marmelad&family=Oxygen&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --dosis: 'Dosis', serif;
+    --oxygen: 'Oxygen', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list {
+    background: #ede6dc;
+    margin: 0;
+    padding: 0.1rem 0;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.nav-item {
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #784f4f;
+}
+
+.nav-item:first-child {
+    margin-right: auto;
+    margin-left: 2rem;
+}
+.logo-1 {
+    width: 150px;
+    height: 75px;
+}
+
+.image-section {
+    margin-top: 10px;
+ 
+}
+
+.image-section img {
+    width: 800px;
+}
+
+.deskripsi-berita {
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--dosis) ;
+    text-align: justify;
+}
+
+.paragraphic {
+    padding: 0 auto;
+    font-family: var(--oxygen);
+    font-weight: 400;
+    
+}
+
+.container-post { 
+   flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: justify;
+
+}
+
+.container{
+    width: auto;
+    height: auto;
+    padding: 30px;
+    border-radius: 20px;
+    background: #ede6dc;
+    margin: 50px 200px;
+    margin-top: -30px;
+}
+.image-section img {
+    width: 100%;
+}
+
+header {
+    background: #739072;
+    padding: 100px;
+    text-align: center;
+}
+nav {
+    background: #739072;
+}
+footer {
+  background:black;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+}
+.social-links{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+.social-links a{
+  border: 2px solid #fff;
+  color: #fff;
+  display: block;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+  margin: 0 0.3rem;
+  transition: all 0.5s ease;
+}
+.social-links a:hover {
+  background: #fff;
+  color: black;
+}
+.footer span{
+ margin-top: 1rem;
+ display: block;
+ letter-spacing: 2px; 
+}
+
+.smaller-image {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}

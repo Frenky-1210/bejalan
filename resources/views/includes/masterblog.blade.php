@@ -45,5 +45,6 @@
           toastr.success("{{ Session::get('done') }}");
         @endif
       </script>
+
 </body>
 </html>

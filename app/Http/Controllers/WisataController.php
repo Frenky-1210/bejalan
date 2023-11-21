@@ -60,6 +60,14 @@ class WisataController extends Controller
      */
     public function show($id)
     {
+        $wisata = Wisata::find($id);
+
+        // Pastikan wisata ditemukan
+        if (!$wisata) {
+            abort(404);
+        }
+
+        return response()->json($wisata);
         // $wisata = Wisata::find($id);
         // return response()->json($wisata);
     }
@@ -115,6 +123,4 @@ class WisataController extends Controller
         Wisata::destroy($wisatum->id);
         return redirect('/wisata')->with('success', 'Data Telah Dihapus');
     }
-
-
 }

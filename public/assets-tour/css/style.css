@@ -419,3 +419,45 @@ footer {
    letter-spacing: 2px; 
   }
 
+  .custom-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.custom-pagination .pagination {
+    margin: 0;
+}
+
+.custom-pagination .pagination li {
+    margin: 0 5px;
+    list-style: none;
+}
+
+.custom-pagination .pagination li a,
+.custom-pagination .pagination li span {
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #3498db;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-pagination .pagination .page-item.active .page-link {
+    background-color: #3498db;
+    border-color: #3498db;
+    color: #fff;
+}
+
+.custom-pagination .pagination li a:hover {
+    background-color: #3498db;
+    color: #fff;
+    border-color: #3498db;
+}
+
+
+
+

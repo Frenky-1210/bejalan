@@ -10,12 +10,11 @@
 <body>
     <div class="container">
         <h1 class="my-3 text-center">Pesanan</h1>
-        @foreach ($pesanan as $pesananItem)
         <div class="card mx-auto w-75" style="width: 18rem;">
             <img style="max-height: 200px; object-fit: cover; width: 100%;" class="card-img-top" src="{{ asset('assets/images/Danau-Biru.jpg') }}" alt="Card image cap">
             <div class="card-body">
-              <h5 class="card-title">{{$pesananItem->wisata->tempat_wisata}}</h5>
-              <p class="card-text">{{$pesananItem->wisata->deskripsi}}</p>
+              <h5 class="card-title">Laman Boenda</h5>
+              <p class="card-text">dsvjcbfvkjfdvdfjjk</p>
               <form action="{{ route('checkout') }}" method="POST" id="checkoutForm">
                 @csrf
                 <div class="mb-3">
@@ -35,7 +34,6 @@
             </form>            
             </div>
         </div>
-        @endforeach
     </div>
     
     <script>
