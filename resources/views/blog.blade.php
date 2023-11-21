@@ -86,7 +86,7 @@
 
 <div class="container-2">
     <div class="box-title-wisata">
-        <h2>Destinasi populer <span class="pulau-bintan">Pulau Bintan</span> </h2>
+        <h2>Destinasi <span class="pulau-bintan">Pulau Bintan</span> </h2>
             <hr>
                 <p>Bingung Mencari Destinasi Wisata Di Pulau Bintan? Berikut Ini Adalah Rekomendasi Destinasi Wisata Yang dapat Anda Pilih Di pulau Bintan! Selamat berwisata</p>
     </div>
@@ -124,7 +124,7 @@
                     Bejalan
                 </h1>
                 <hr>
-                <p class="about-p">Bintan Island tourism</p>
+                <p class="about-p">Bintan Island Tourism</p>
                 <p class="about-p2">Pulau Bintan adalah sebuah surga tropis yang terletak di Kepulauan Riau, Indonesia. Dengan keindahan alam yang menakjubkan dan kekayaan budaya yang melimpah, Pulau Bintan telah menjadi destinasi wisata yang sangat populer bagi wisatawan yang mencari pengalaman liburan yang unik.
                     Pulau Bintan menawarkan pantai-pantai pasir putih yang bersih, air laut biru yang jernih, dan matahari sepanjang tahun. Aktivitas air seperti snorkeling, selancar, dan berlayar di sekitar pulau-pulau kecil di sekitar Pulau Bintan sangat populer di antara pengunjung. Pulau ini juga dikenal karena lapangan golfnya yang menakjubkan, dengan pemandangan laut yang menakjubkan.                      
                 </p>

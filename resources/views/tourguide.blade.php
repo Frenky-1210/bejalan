@@ -15,33 +15,36 @@
     </div> -->
     <!-- Di dalam bagian "hero-section" -->
     <section class="hero-section">
-        <div class="slide-container swiper">
-            <div class="slide-content">
-                <div class="card-wrapper swiper-wrapper">
-                    @foreach($tour as $tourr)
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-                            <div class="card-image">
-                                <img src="{{ asset('storage/'. $tourr->foto) }}" alt="" class="card-img">
+        <div class="shape-contain">
+        <h2 class="title-tour">Tour Guide</h2>
+            <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        @foreach($tour as $tourr)
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+                                <div class="card-image">
+                                    <img src="{{ asset('storage/'. $tourr->foto) }}" alt="" class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="name">
+                                    {{$tourr->nama_tourguide}} 
+                                </h2>
+                                <p class="description">{{$tourr->pengalaman}}</p>
+    
+                                <!-- Ganti data-tourguide-id dengan ID yang sesuai -->
+                                <button type="submit" class="button" data-tour-id="{{ $tourr->id }}">View More</button>
                             </div>
                         </div>
-                        <div class="card-content">
-                            <h2 class="name">
-                                {{$tourr->nama_tourguide}} 
-                            </h2>
-                            <p class="description">{{$tourr->pengalaman}}</p>
-
-                            <!-- Ganti data-tourguide-id dengan ID yang sesuai -->
-                            <button type="submit" class="button" data-tour-id="{{ $tourr->id }}">View More</button>
-                        </div>
+                        @endforeach
                     </div>
-                    @endforeach
                 </div>
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-button-next swiper-navBtn"></div>
-            <div class="swiper-button-prev swiper-navBtn"></div>
-            <div class="swiper-pagination"></div>
         </div>
     </section>
 
