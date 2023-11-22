@@ -111,13 +111,8 @@
         </div>
         <div class="paginate">
         {{ $wisata->links() }}
-            </div>
         </div>
-        
-        
-        
-        
-    
+    </div>
 </div>
 
 
