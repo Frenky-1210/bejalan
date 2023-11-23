@@ -3,14 +3,9 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
     <div class="card shadow mb-4">
-        <div class="card-header py-3 d-flex justify-content-between align-items-center">
+        <div class="card-header py-4 d-flex justify-content-between align-items-center">
             <div>
                 <h6 class="m-0 font-weight-bold text-primary">Data Payment</h6>
-            </div>
-            <div class="float-right">
-                <button class="btn btn-primary" data-toggle="modal" data-target="#addModal">
-                    Tambah
-                </button>
             </div>
         </div>
         <div class="card-body">

@@ -11,12 +11,13 @@
     <div class="container">
         <h1 class="my-3 text-center">Pesanan</h1>
         <div class="card mx-auto w-75" style="width: 18rem;">
-            <img style="max-height: 200px; object-fit: cover; width: 100%;" class="card-img-top" src="{{ asset('assets/images/Danau-Biru.jpg') }}" alt="Card image cap">
+            <!-- Tambahkan id untuk gambar dan teks destinasi wisata -->
+            <img id="gambar-wisata" style="max-height: 200px; object-fit: cover; width: 100%;" class="card-img-top" alt="">
             <div class="card-body">
-              <h5 class="card-title">Laman Boenda</h5>
-              <p class="card-text">dsvjcbfvkjfdvdfjjk</p>
+                <h5 class="card-title" id="destinasi-wisata"></h5>
               <form action="{{ route('checkout') }}" method="POST" id="checkoutForm">
                 @csrf
+                <input type="hidden" name="wisata_id" id="wisata-id-input">
                 <div class="mb-3">
                     <label for="name">Nama</label>
                     <input type="text" id="name" name="name" class="form-control" value="{{ auth()->user()->name }}" placeholder="Nama" readonly>
@@ -35,7 +36,22 @@
             </div>
         </div>
     </div>
+
+    {{-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const wisataIdInput = document.getElementById('wisata-id-input');
+            if (wisataIdInput) {
+                const wisataId = localStorage.getItem('wisataId');
+                console.log('Wisata ID:', wisataId);
     
+                // Selanjutnya, Anda dapat menggunakan nilai wisataId sesuai kebutuhan
+                // Misalnya, atur nilai input hidden dengan nilai dari localStorage
+                wisataIdInput.value = wisataId;
+            } else {
+                console.error("Elemen dengan ID 'wisata-id-input' tidak ditemukan.");
+            }
+        });
+    </script>    --}}
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Ambil nilai pesanan_id dari URL

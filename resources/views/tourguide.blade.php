@@ -62,6 +62,7 @@
                         <h2>{{ $psn->wisata->tempat_wisata }}</h2>
                     </div>
                 </div>
+
                 <div class="item-tour-description">
                     <div class="item-utama">
                         <span><p>Jadwal</p></span>
@@ -101,7 +102,21 @@
             <!-- Tambahkan tur lebih lanjut jika diperlukan -->
         </div>
     </section>
-    
+
+    {{-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const pesanLink = document.querySelectorAll('.pesan-link');
+            pesanLink.forEach(link => {
+                link.addEventListener('click', function () {
+                    // Ambil data dari elemen terdekat (tour-item-container)
+                    const wisataId = this.closest('.tour-item-container').querySelector('.selected-wisata-id').value;
+                    // Setel value dari hidden input di halaman selanjutnya
+                    document.getElementById('wisata-id-input').value = wisataId;
+                });
+            });
+        });
+    </script> --}}
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var pesanLinks = document.querySelectorAll('.pesan-link');
