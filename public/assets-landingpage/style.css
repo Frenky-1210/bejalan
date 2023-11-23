@@ -210,6 +210,7 @@ ul {
     position: relative;
     font-weight: 700;
     letter-spacing: 2px;
+    margin-bottom: 250px;
 }
 .header-tittle span {
     position: relative;
@@ -276,8 +277,8 @@ ul {
 
 .dropp {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
 
 }
 
@@ -472,6 +473,9 @@ transition: ease-in-out 0.3s;
     .social-media{
         width: 100%;
 
+    }
+    .dropdown {
+        margin-left: auto;
     }
 
     
