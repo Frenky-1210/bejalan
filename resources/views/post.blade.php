@@ -12,6 +12,8 @@
             </div>
             <div class="deskripsi-berita">
                 <div class="paragraphic">
+                    <p><i style="color: gray;">Saya adalah raden</i></p>
+                    <br>
                     <p>{{$wisata->deskripsi}}</p>
                 </div>
             </div>
