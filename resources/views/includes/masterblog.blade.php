@@ -33,6 +33,7 @@
     <!-- Include Toastr from CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{asset('assets/js/script-2.js')}}"></script>
 
     <script>
@@ -44,7 +45,29 @@
         @if (Session::has('done'))
           toastr.success("{{ Session::get('done') }}");
         @endif
-      </script>
+    </script>
 
+    <!-- Script JavaScript -->
+    <script>
+      function tampilkanNotifikasi() {
+          Swal.fire({
+              title: "Ingin Melakukan Pemesanan Tiket ? Ayo daftar terlebih dahulu",
+              showClass: {
+                  popup: `
+                  animate__animated
+                  animate__fadeInUp
+                  animate__faster
+                  `
+              },
+              hideClass: {
+                  popup: `
+                  animate__animated
+                  animate__fadeOutDown
+                  animate__faster
+                  `
+              }
+          });
+      }
+  </script>
 </body>
 </html>

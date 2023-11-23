@@ -153,11 +153,5 @@
 <script src="{{asset('assets-tour/js/swiper-bundle.min.js')}}"></script>
 <script src="{{asset('assets-tour/js/script.js')}}"></script>
 
-<!-- Script JavaScript -->
-<script>
-    function tampilkanNotifikasi() {
-        alert("Ingin melakukan pesanan? Ayo daftar terlebih dahulu supaya bisa melakukan pemesanan.");
-    }
-</script>
 
 @endsection
