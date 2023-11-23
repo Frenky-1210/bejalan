@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{asset('assets-landingpage/style.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="shortcut icon" href="{{asset('assets-dash/images/favicon.png')}}" />
 </head>
 
 <body>
