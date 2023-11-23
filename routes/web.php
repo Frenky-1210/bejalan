@@ -35,7 +35,7 @@ Route::get('/post/{id}',[BlogController::class, 'post'])->name('post');
 
 Route::get('/tourguide', [TourguideController::class, 'index'])->name('tourguide');
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::middleware(['guest'])->group(function(){
     Route::get('/login', [LoginController::class, 'index'])->name('login');
