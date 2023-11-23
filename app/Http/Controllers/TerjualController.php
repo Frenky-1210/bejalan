@@ -26,7 +26,7 @@ class TerjualController extends Controller
         $request->request->add([
             'user_id' => auth()->user()->id,
             'pesanan_id' => $request->input('pesanan'),
-            'total_harga' => $request->jumlah_tiket * 200000,
+            'total_harga' => $request->jumlah_tiket * 2000,
             'status' => 'Unpaid'
         ]);
 
@@ -40,8 +40,6 @@ class TerjualController extends Controller
         \Midtrans\Config::$isSanitized = true;
         // Set 3DS transaction for credit card to true
         \Midtrans\Config::$is3ds = true;
-
-
     
         $params = array(
             'transaction_details' => array(
@@ -65,13 +63,23 @@ class TerjualController extends Controller
     public function callback(Request $request){
         $serverKey = config('midtrans.server_key');
         $hashed = hash("sha512", $request->order_id.$request->status_code.$request->gross_amount.$serverKey);
+    
         if($hashed == $request->signature_key) {
             if($request->transaction_status == 'capture') {
                 $check = Terjual::find($request->order_id);
-                $check->update(['status' => 'Paid']);
+    
+                dd($request->order_id); // Tambahkan ini untuk debugging
+    
+                if ($check) {
+                    $check->status = 'Paid';
+                    $check->save();
+                } else {
+                    dd('Data tidak ditemukan'); // Tambahkan ini untuk debugging
+                }
             }
         }
     }
+    
 
     public function invoice($id){
         $check = Terjual::find($id);

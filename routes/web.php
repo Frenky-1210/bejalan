@@ -29,13 +29,10 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
-
-Route::get('/blog', [BlogController::class, 'index'])->name('blog');
-Route::get('/post/{id}',[BlogController::class, 'post'])->name('post');
-
-Route::get('/tourguide', [TourguideController::class, 'index'])->name('tourguide');
-
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+Route::get('/post/{id}', [BlogController::class, 'post'])->name('post');
+Route::get('/tourguide', [TourguideController::class, 'index'])->name('tourguide');
 
 Route::middleware(['guest'])->group(function(){
     Route::get('/login', [LoginController::class, 'index'])->name('login');

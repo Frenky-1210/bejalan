@@ -12,11 +12,6 @@
 </head>
 
 <body>
-    @if(session('verified'))
-        <div class="alert alert-success" role="alert">
-            Your email has been successfully verified!
-        </div>
-    @endif
     <!-- Header -->
     <header class="parallax-window" data-parallax="scroll" data-image-src="{{asset('assets-landingpage/Images/Bg-header.jpg')}}">
         <nav>
@@ -61,6 +56,7 @@
                                     <i class="ri-contract-right-line dropdown__icon"></i>
                                     <span class="dropdown__name"><a href="{{ route('logout') }}">Logout</a></span>
                                 </li>
+                            
                             @endif
                         </ul>
                         @endauth
