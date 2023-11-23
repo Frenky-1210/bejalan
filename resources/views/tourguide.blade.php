@@ -108,6 +108,9 @@
             @endforeach
             <!-- Tambahkan tur lebih lanjut jika diperlukan -->
         </div>
+        <div class="paginate">
+            {{ $pesanan->links() }}
+        </div>
     </section>
 
     {{-- <script>

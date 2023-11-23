@@ -12,7 +12,7 @@ class TourguideController extends Controller
 {
     public function index(){
         $tour = Tour::all();
-        $pesanan = Pesanan::all();
+        $pesanan = Pesanan::paginate(9);
         $wisatas = Wisata::all();
         return view('tourguide', compact('tour', 'pesanan', 'wisatas'));
     }
