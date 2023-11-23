@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Pesanan;
 use App\Models\Terjual;
+use App\Models\Wisata;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -57,6 +58,7 @@ class TerjualController extends Controller
         );
     
         $snapToken = \Midtrans\Snap::getSnapToken($params);
+        
         return view('checkout.check', compact('snapToken', 'check', 'pesanan'));
     }
     

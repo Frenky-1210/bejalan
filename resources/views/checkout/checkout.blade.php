@@ -12,9 +12,9 @@
         <h1 class="my-3 text-center">Pesanan</h1>
         <div class="card mx-auto w-75" style="width: 18rem;">
             <!-- Tambahkan id untuk gambar dan teks destinasi wisata -->
-            <img id="gambar-wisata" style="max-height: 200px; object-fit: cover; width: 100%;" class="card-img-top" alt="">
+            <img src="" id="gambar-wisata" style="max-height: 200px; object-fit: cover; width: 100%;" class="card-img-top" alt="">
             <div class="card-body">
-                <h5 class="card-title" id="destinasi-wisata"></h5>
+                <h5 class="card-title text-center" id="destinasi-wisata"></h5>
               <form action="{{ route('checkout') }}" method="POST" id="checkoutForm">
                 @csrf
                 <input type="hidden" name="wisata_id" id="wisata-id-input">
@@ -37,21 +37,31 @@
         </div>
     </div>
 
-    {{-- <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const wisataIdInput = document.getElementById('wisata-id-input');
-            if (wisataIdInput) {
-                const wisataId = localStorage.getItem('wisataId');
-                console.log('Wisata ID:', wisataId);
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mendapatkan data dari cookies
+            const wisataId = getCookie('wisataId');
+            const gambarWisata = getCookie('gambarWisata');
+            const namaDestinasi = getCookie('namaDestinasi');
     
-                // Selanjutnya, Anda dapat menggunakan nilai wisataId sesuai kebutuhan
-                // Misalnya, atur nilai input hidden dengan nilai dari localStorage
-                wisataIdInput.value = wisataId;
-            } else {
-                console.error("Elemen dengan ID 'wisata-id-input' tidak ditemukan.");
-            }
+            console.log('wisataId:', wisataId);
+            console.log('gambarWisata:', gambarWisata);
+            console.log('namaDestinasi:', namaDestinasi);
+    
+            // Set nilai di card checkout
+            document.getElementById('wisata-id-input').value = wisataId;
+            document.getElementById('gambar-wisata').src = gambarWisata;
+            document.getElementById('destinasi-wisata').textContent = namaDestinasi;
         });
-    </script>    --}}
+    
+        // Fungsi untuk mendapatkan nilai dari cookies
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+    </script>    
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Ambil nilai pesanan_id dari URL

@@ -33,10 +33,6 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/post/{id}',[BlogController::class, 'post'])->name('post');
 
-Route::get('/terjual', [TerjualController::class, 'index'])->name('terjual');
-Route::post('/checkout', [TerjualController::class, 'checkout'])->name('checkout');
-Route::get('/invoice/{id}', [TerjualController::class, 'invoice']);
-
 Route::get('/tourguide', [TourguideController::class, 'index'])->name('tourguide');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
@@ -51,6 +47,9 @@ Route::middleware(['guest'])->group(function(){
 Route::middleware(['auth'])->group( function() {
     Route::get('/email/verify/need-verification', [VerificationController::class, 'notice'])->name('verification.notice');
     Route::get('/email/verify/{id}/{hash}', [VerificationController::class, 'verify'])->middleware('signed')->name('verification.verify');
+    Route::get('/terjual', [TerjualController::class, 'index'])->name('terjual');
+    Route::post('/checkout', [TerjualController::class, 'checkout'])->name('checkout');
+    Route::get('/invoice/{id}', [TerjualController::class, 'invoice']);
     Route::resource('/wisata', WisataController::class);
     Route::resource('/pesanan', PesananController::class);
     Route::resource('/translator', TranslatorController::class);

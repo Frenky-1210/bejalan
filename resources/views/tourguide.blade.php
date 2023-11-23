@@ -92,7 +92,14 @@
                 </div>
                 <div class="button-bayar">
                     @if(auth()->check())
-                        <a href="{{ route('terjual', ['pesanan_id' => $psn->id]) }}" id="pesan-link" class="pesan-link tombol-pesan" data-pesanan-id="{{ $psn->id }}">Pesan</a>
+                    <a href="{{ route('terjual', ['pesanan_id' => $psn->id]) }}" 
+                        id="pesan-link" 
+                        class="pesan-link tombol-pesan" 
+                        data-pesanan-id="{{ $psn->id }}" 
+                        data-wisata-id="{{ $psn->wisata->id }}"
+                        data-gambar="{{ asset('storage/'. $psn->wisata->gambar) }}"
+                        data-nama-destinasi="{{ $psn->wisata->tempat_wisata }}"
+                        onclick="setWisataDetails(this)">Pesan</a>                     
                     @else
                         <button class="bayar" onclick="tampilkanNotifikasi()">Pesan</button>
                     @endif
@@ -116,6 +123,28 @@
             });
         });
     </script> --}}
+
+    <script>
+        function setWisataDetails(button) {
+            // Di halaman yang memicu pesanan
+            const wisataId = button.getAttribute('data-wisata-id');
+            const gambarWisata = button.getAttribute('data-gambar');
+            const namaDestinasi = button.getAttribute('data-nama-destinasi');
+
+            console.log('wisataId:', wisataId);
+            console.log('gambarWisata:', gambarWisata);
+            console.log('namaDestinasi:', namaDestinasi);
+
+            // Menyimpan data dalam cookies
+            document.cookie = `wisataId=${wisataId}`;
+            document.cookie = `gambarWisata=${gambarWisata}`;
+            document.cookie = `namaDestinasi=${namaDestinasi}`;
+
+            // Mengarahkan ke halaman checkout
+            window.location.href = "{{ route('checkout') }}";
+        }
+    </script>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
