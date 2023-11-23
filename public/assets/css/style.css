@@ -137,9 +137,11 @@ margin-top: -200px;
 .box-container-1 {
 background:  #f6f0e7;
 border-radius: 3rem;
-margin: 20px auto;
+margin: 10px auto;
+margin-bottom: 40px;
 padding-bottom: 20px;
 max-width: 1200px;
+
 }
 
 .box-title {
@@ -211,6 +213,7 @@ justify-content: center;
 .box-overlay-popular h1{
 font-family: var(--fredoka);
 color: #5c5247;
+text-align: center;
 }
 .card-overlay-popular {
 position: absolute;
@@ -222,6 +225,7 @@ padding: 10px 10px;
 background: rgba(255, 255, 255, 0.7);
 text-align: center;
 transition: 0.3s ease-in-out, 0.3s ease-in-out;
+font-size: 15px;
 }
 .title_card{
 margin: 0;
@@ -512,7 +516,8 @@ margin: 0 auto;
 
 .about-deskripsi {
 margin: 0 20px; /* Set margin for both left and right sides */
-text-align: center; /* Center the text horizontally */
+text-align: center;
+font-family: var(--marmelad); /* Center the text horizontally */
 }
 
 .about-p2 {
@@ -684,4 +689,9 @@ padding-left: 0rem;
  .logo-1 {
   width: 50%;
  }
+
+ .box-container-1 {
+ 
+  margin-top: 0px !important;
+  }
 }

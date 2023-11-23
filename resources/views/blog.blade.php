@@ -17,7 +17,7 @@
                 <div class="box-overlay-popular">
                     <h1 class="card-title">Crystal Lagoon</h1>
                     <hr>
-                    <p class="card-data">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore aut optio rem placeat molestias animi architecto dolorum sapiente consequuntur natus molestiae, modi ullam eveniet? Explicabo ipsa facere dolor quos?</p>
+                    <p class="card-data">Crystall Lagoon adalah sebuah inovasi rekayasa dan desain arsitektur yang menghasilkan kolam renang buatan dengan air yang sangat jernih dan transparan, menyerupai keindahan dan keasrian air laut tropis. Kolam renang ini sering kali dilengkapi dengan pasir putih di sekelilingnya dan menciptakan suasana liburan eksotis. </p>
                 </div>
             </article>
             
@@ -29,7 +29,7 @@
                 <div class="box-overlay-popular">
                     <h1 class="card-title">Pantai Pengudang</h1>
                     <hr>
-                    <p class="card-data">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore aut optio rem placeat molestias animi architecto dolorum sapiente consequuntur natus molestiae, modi ullam eveniet? Explicabo ipsa facere dolor quos?</p>
+                    <p class="card-data">Pantai Pengudang menawarkan keindahan alam yang menakjubkan dengan pasir putih yang lembut, air laut yang jernih, dan pemandangan laut yang memukau. Terletak di Tlk. Sebong, Kabupaten Bintan, Kepulauan Riau, pantai ini menjadi tempat ideal untuk bersantai, berjemur, dan menikmati keindahan alam. </p>
                 </div>
             </article>
 
@@ -41,7 +41,7 @@
                 <div class="box-overlay-popular">
                     <h1 class="card-title">Kampung Wisata Panglong</h1>
                     <hr>
-                    <p class="card-data">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore aut optio rem placeat molestias animi architecto dolorum sapiente consequuntur natus molestiae, modi ullam eveniet? Explicabo ipsa facere dolor quos?</p>
+                    <p class="card-data">Kampung Wisata Panglong adalah destinasi wisata yang memukau, menyajikan pengalaman autentik kehidupan kampung dengan keindahan alam yang menawan. Terletak diTanjungpinang, Kota Tanjung Pinang, Kepulauan Riau, kampung ini memperkenalkan pengunjung pada kehidupan sehari-hari masyarakat setempat, tradisi, dan kebudayaan yang kaya.</p>
                 </div>
             </article>
 
@@ -53,7 +53,7 @@
                 <div class="box-overlay-popular">
                     <h1 class="card-title">Pantai Senggiling</h1>
                     <hr>
-                    <p class="card-data">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore aut optio rem placeat molestias animi architecto dolorum sapiente consequuntur natus molestiae, modi ullam eveniet? Explicabo ipsa facere dolor quos?</p>
+                    <p class="card-data">Pantai berpasir putih ini memiliki lingkungan yang masih sangat asri, karena jarang terjamah manusia. Selain pasir putih, di sepanjang Pantai Senggiling juga terdapat jajaran batu karang yang seakan membingkai pantai.</p>
                 </div>
             </article>
 
@@ -65,7 +65,7 @@
                 <div class="box-overlay-popular">
                     <h1 class="card-title">Vihara Avalokitesvara Graha</h1>
                     <hr>
-                    <p class="card-data">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae labore aut optio rem placeat molestias animi architecto dolorum sapiente consequuntur natus molestiae, modi ullam eveniet? Explicabo ipsa facere dolor quos?</p>
+                    <p class="card-data">Vihara Avalokitesvara Graha atau merupakan salah satu wihara Buddha di Tanjungpinang, Kepulauan Riau, Indonesia. Wihara ini disebut sebagai wihara terbesar se-Asia Tenggara. Wihara ini dibangun oleh sebuah yayasan komunitas Tionghoa di Tanjungpinang untuk dijadikan sebagai tempat memperdalam ilmu agama, berguru dan belajar para biksu</p>
                 </div>
             </article>
 
@@ -77,7 +77,7 @@
                 <div class="box-overlay-popular">
                     <h1 class="card-title">Wihara Pohon Banyan</h1>
                     <hr>
-                    <p class="card-data">Lorem ipsum dolor siti amet consectetur adipisicing elit. Recusandae labore aut optio rem placeat molestias animi architecto dolorum sapiente consequuntur natus molestiae, modi ullam eveniet? Explicabo ipsa facere dolor quos?</p>
+                    <p class="card-data">Vihara Pohon Banyan adalah sebuah tempat ibadah umat Buddha yang terletak di Tanjungpinang. Wihara ini memiliki pohon banyan yang besar dan tua sebagai objek wisata yang menarik. Di dalam wihara terdapat patung-patung Buddha yang indah</p>
                 </div>
             </article>
         </div>
