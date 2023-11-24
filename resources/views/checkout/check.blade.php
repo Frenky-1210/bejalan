@@ -39,17 +39,17 @@
     </style>
 
     <!-- @TODO: replace SET_YOUR_CLIENT_KEY_HERE with your client key -->
-    <script type="text/javascript" src="{{config('midtrans.snap_url')}}" data-client-key="{{ config('midtrans.client_key') }}"></script>
-    <!-- Note: replace with src="https://app.midtrans.com/snap/snap.js" for Production environment -->
+    <script type="text/javascript"
+        src={{config('midtrans.snap_url')}}
+        data-client-key={{config('midtrans.client_key')}}></script>
+<!-- Note: replace with src="https://app.midtrans.com/snap/snap.js" for Production environment -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
     <div class="container mt-2">
         <h1 class="text-center mb-4">Pesanan</h1>
-        <div class="card mx-auto" style="width: 35rem;"> <!-- Menyesuaikan width menjadi 20rem -->
-            <img class="card-img-top" src="{{asset('assets/images/Danau-Biru.jpg')}}" style="width: 558px; height: 558px;" alt="Card image cap">
+        <div class="card mx-auto" style="width: 20rem;">
             <div class="card-body">
-                <h5 class="card-title text-center">Danau Biru</h5>
                 <table class="table">
                     <tr>
                         <td>Nama</td>

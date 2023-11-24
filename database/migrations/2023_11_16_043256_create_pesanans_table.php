@@ -22,7 +22,6 @@ return new class extends Migration
                 $table->string('fasilitas');
                 $table->string('biaya');
                 $table->string('kuota');
-                $table->string('pesanan');
                 $table->timestamps();
             });
         }

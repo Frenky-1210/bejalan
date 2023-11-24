@@ -49,7 +49,6 @@ Route::middleware(['auth'])->group( function() {
     Route::get('/invoice/{id}', [TerjualController::class, 'invoice']);
     Route::resource('/wisata', WisataController::class);
     Route::resource('/pesanan', PesananController::class);
-    Route::resource('/translator', TranslatorController::class);
     Route::resource('/payment', PaymentController::class);
     Route::resource('/tour', TourController::class);
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('userAkses:Admin');

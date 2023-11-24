@@ -124,7 +124,8 @@
                 <h2>Bejalan</h2>
                 <p>Bintan Island Tourism</p>
               </div>
-              <p>Bejalan adalah perusahaan yang berkomitmen untuk memberikan pengalaman perjalanan yang tak terlupakan kepada pelanggan kami. Sebagai penyedia layanan pariwisata terkemuka, kami menghadirkan destinasi menakjubkan dan program perjalanan yang dirancang khusus untuk memenuhi keinginan dan ekspektasi Anda.
+              <p>Pulau Bintan adalah sebuah surga tropis yang terletak di Kepulauan Riau, Indonesia. Dengan keindahan alam yang menakjubkan dan kekayaan budaya yang melimpah, Pulau Bintan telah menjadi destinasi wisata yang sangat populer bagi wisatawan yang mencari pengalaman liburan yang unik.
+                Pulau Bintan menawarkan pantai-pantai pasir putih yang bersih, air laut biru yang jernih, dan matahari sepanjang tahun. Aktivitas air seperti snorkeling, selancar, dan berlayar di sekitar pulau-pulau kecil di sekitar Pulau Bintan sangat populer di antara pengunjung. Pulau ini juga dikenal karena lapangan golfnya yang menakjubkan, dengan pemandangan laut yang menakjubkan.  
                 </p>
 
                 <a href="{{route('blog')}}" class="read-more-button">Read More <i class="f"></i>

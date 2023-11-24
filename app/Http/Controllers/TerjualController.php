@@ -26,8 +26,8 @@ class TerjualController extends Controller
         $request->request->add([
             'user_id' => auth()->user()->id,
             'pesanan_id' => $request->input('pesanan'),
-            'total_harga' => $request->jumlah_tiket * 2000,
-            'status' => 'Unpaid'
+            'total_harga' => $request->jumlah_tiket * 10,
+            'status' => 'Paid'
         ]);
 
         $check = Terjual::create($request->all());
@@ -35,7 +35,7 @@ class TerjualController extends Controller
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = config('midtrans.server_key');
         // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
-        \Midtrans\Config::$isProduction = true;
+        \Midtrans\Config::$isProduction = config('midtrans.is_production');
         // Set sanitization on (default)
         \Midtrans\Config::$isSanitized = true;
         // Set 3DS transaction for credit card to true
@@ -66,21 +66,13 @@ class TerjualController extends Controller
     
         if($hashed == $request->signature_key) {
             if($request->transaction_status == 'capture') {
-                $check = Terjual::find($request->order_id);
-    
-                dd($request->order_id); // Tambahkan ini untuk debugging
-    
-                if ($check) {
-                    $check->status = 'Paid';
-                    $check->save();
-                } else {
-                    dd('Data tidak ditemukan'); // Tambahkan ini untuk debugging
-                }
+                $check = Terjual::where('id', $request->order_id)->first();
+                $check->update(['status' => 'Paid']);
             }
         }
     }
     
-
+    
     public function invoice($id){
         $check = Terjual::find($id);
         return view('checkout.invoice', compact('check'));
