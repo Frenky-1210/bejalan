@@ -26,7 +26,7 @@ class TerjualController extends Controller
         $request->request->add([
             'user_id' => auth()->user()->id,
             'pesanan_id' => $request->input('pesanan'),
-            'total_harga' => $request->jumlah_tiket * 10,
+            'total_harga' => $request->jumlah_tiket * 200000,
             'status' => 'Paid'
         ]);
 
