@@ -29,7 +29,13 @@
 
         #pay-button {
             width: 100%; /* Melebar button sesuai lebar card */
+            margin-bottom: 10px;
         }
+
+        #back-button {
+            width: 100%; /* Melebar button sesuai lebar card */
+        }
+
     </style>
 
     <!-- @TODO: replace SET_YOUR_CLIENT_KEY_HERE with your client key -->
@@ -61,8 +67,11 @@
                         <td>Total Harga</td>
                         <td>: Rp {{$check->total_harga}}</td>
                     </tr>
-                  </table>
-                  <button type="submit" class="btn btn-primary" id="pay-button">Bayar</button>
+                </table>
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-primary" id="pay-button">Bayar</button>
+                    <a href="{{route('tourguide')}}" type="button" class="btn btn-danger" id="back-button">Batal</a>
+                </div>
               </div>
           </div>
           <!-- Pindahkan #snap-container ke sini -->

@@ -31,7 +31,7 @@
                             @if(auth()->check())
                                 <span class="dropdown__name">{{ auth()->user()->name }}</span>
                             @else
-                                <span class="dropdown__name"><a href="{{ route('login') }}">My Profile</a></span>
+                                <span class="dropdown__name"><a href="{{ route('login') }}">Login</a></span>
                             @endif
                 
                             <div class="dropdown__icons">
