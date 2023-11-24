@@ -12,7 +12,7 @@
             </div>
             <div class="deskripsi-berita">
                 <div class="paragraphic">
-                    <p><i style="color: gray;">Saya adalah raden</i></p>
+                    <p><i style="color: gray;">{{Carbon\Carbon::parse($wisata->created_at)->format('j F Y')}} - {{$wisata->sumber_data}}</i></p>
                     <br>
                     <p>{{$wisata->deskripsi}}</p>
                 </div>

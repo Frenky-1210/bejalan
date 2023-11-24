@@ -10,7 +10,7 @@
         </div>
         <div class="box-populer">
             <article class="card-article">
-                <img src="{{asset('assets/images/crystal-populer.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px;">
+                <img src="{{asset('assets/images/crystal-populer.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px; object-fit: cover;">
                 <div class="card-overlay-popular">
                     <h1 class="title_card">Crystal Lagoon</h1>
                 </div>
@@ -22,7 +22,7 @@
             </article>
             
             <article class="card-article">
-                <img src="{{asset('assets/images/pantai-pengudang.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px;">
+                <img src="{{asset('assets/images/Pantai Pengudang.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px; object-fit: cover;">
                 <div class="card-overlay-popular">
                     <h1 class="title_card">Pantai Pengudang</h1>
                 </div> 
@@ -34,7 +34,7 @@
             </article>
 
             <article class="card-article">
-                <img src="{{asset('assets/images/kampung-wisata.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px;">
+                <img src="{{asset('assets/images/kampung-wisata.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px; object-fit: cover;">
                 <div class="card-overlay-popular">
                     <h1 class="title_card">Kampung Wisata Panglong</h1>
                 </div>
@@ -46,7 +46,7 @@
             </article>
 
             <article class="card-article">
-                <img src="{{asset('assets/images/senggiling.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px;">
+                <img src="{{asset('assets/images/Pantai Senggiling.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px; object-fit: cover;">
                 <div class="card-overlay-popular">
                     <h1 class="title_card">Pantai Senggiling</h1>
                 </div>
@@ -58,7 +58,7 @@
             </article>
 
             <article class="card-article">
-                <img src="{{asset('assets/images/Vihara Avalokitesvara Graha.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px;">
+                <img src="{{asset('assets/images/Vihara-Avalokhi-Thesvara-Graha-Tanjungpinang.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px; object-fit: cover;">
                 <div class="card-overlay-popular">
                     <h1 class="title_card">Vihara Avalokitesvara Graha</h1>
                 </div>
@@ -70,12 +70,12 @@
             </article>
 
              <article class="card-article">
-                <img src="{{asset('assets/images/Wihara Pohon Banyan.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px;">
+                <img src="{{asset('assets/images/Klenteng-Pohon-Banyan.jpg')}}" alt="" class="image-populer" style="width: 369px; height: 373px; object-fit: cover;">
                 <div class="card-overlay-popular">
-                    <h1 class="title_card">Wihara Pohon Banyan</h1>
+                    <h1 class="title_card">Vihara Pohon Banyan</h1>
                 </div>
                 <div class="box-overlay-popular">
-                    <h1 class="card-title">Wihara Pohon Banyan</h1>
+                    <h1 class="card-title">Vihara Pohon Banyan</h1>
                     <hr>
                     <p class="card-data">Vihara Pohon Banyan adalah sebuah tempat ibadah umat Buddha yang terletak di Tanjungpinang. Wihara ini memiliki pohon banyan yang besar dan tua sebagai objek wisata yang menarik. Di dalam wihara terdapat patung-patung Buddha yang indah</p>
                 </div>

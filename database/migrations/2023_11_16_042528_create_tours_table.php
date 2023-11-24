@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama_tourguide');
             $table->string('umur');
             $table->string('jenis_kelamin');
-            $table->string('pengalaman');
+            $table->text('pengalaman');
             $table->string('no_telp');
             $table->string('foto');
             $table->timestamps();

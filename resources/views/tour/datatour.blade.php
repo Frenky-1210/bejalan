@@ -140,7 +140,7 @@
                                 <label for="hp" class="control-label">
                                     <i class="fas fa-phone"></i> No Telp
                                 </label>
-                                <input type="number" class="form-control @error('no_telp') is-invalid @enderror" id="no_telp-add" name="no_telp" placeholder="No Telp">
+                                <input type="text" class="form-control @error('no_telp') is-invalid @enderror" id="no_telp-add" name="no_telp" placeholder="No Telp">
                                 @error('no_telp')
                                 <div class="alert alert-danger mt-2" role="alert">
                                     {{ $message }}

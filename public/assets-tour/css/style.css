@@ -352,6 +352,7 @@ grid-template-columns: repeat(1, 1fr);
     flex-direction: column;
     text-align: center;
     color: white;
+    font-family: var(--body-font);
     
     
     /* Align the detail section to the right */
