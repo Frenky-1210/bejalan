@@ -329,6 +329,7 @@ grid-template-columns: repeat(1, 1fr);
     display: flex;
     flex-direction: column;
     text-align: center;
+    color: white;
     
     
     /* Align the detail section to the right */

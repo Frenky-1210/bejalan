@@ -322,9 +322,12 @@ border-radius: 20px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    
+        color: wheat;
     
     /* Align the detail section to the right */
+}
+.deskripsi-detail p{
+    color: wheat;
 }
 .item-utama {
     display: flex;
@@ -355,6 +358,7 @@ border-radius: 20px;
     width: 1fr;
     padding: 3px;
     text-align: center;
+    color: white;
     
 }
 .item-utama span {
