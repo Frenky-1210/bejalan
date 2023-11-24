@@ -353,6 +353,7 @@ grid-template-columns: repeat(1, 1fr);
     text-align: center;
     color: white;
     font-family: var(--body-font);
+    font-size: 73%;
     
     
     /* Align the detail section to the right */
@@ -360,6 +361,9 @@ grid-template-columns: repeat(1, 1fr);
 .item-utama {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
+    height: auto;
+    
     
 }
 .button-bayar a {
@@ -386,6 +390,7 @@ grid-template-columns: repeat(1, 1fr);
     width: 1fr;
     padding: 3px;
     text-align: center;
+    font-size: 100%;
     
 }
 .item-utama span {
@@ -393,6 +398,10 @@ grid-template-columns: repeat(1, 1fr);
     padding-right: 60px;
     background-color: #F3EEEA;
     border-radius: 10px 0px 0px 10px;
+    -webkit-border-radius: 10px 0px 0px 10px;
+    -moz-border-radius: 10px 0px 0px 10px;
+    -ms-border-radius: 10px 0px 0px 10px;
+    -o-border-radius: 10px 0px 0px 10px;
 }
 /* Media query for mobile devices */
 @media (max-width: 767px) {
